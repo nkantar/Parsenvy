@@ -1,5 +1,5 @@
 import os
-import parsenvy
+from parsenvy import parsenvy
 import unittest
 
 
