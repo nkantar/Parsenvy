@@ -37,3 +37,9 @@ Examples
     set(['wat', 'wut', 'wot'])
     >>> parsenvy.dict('DICT_ENV_VAR')  # DICT_ENV_VAR=a:1,b:2
     {'a': '1', 'b': '2'}
+
+Contributing
+------------
+
+Contributions of all sorts are welcome, be they bug reports, patches, or even just feedback. Creating a `new issue <https://github.com/nkantar/Parsenvy/issues/new>`_ or `pull request <https://github.com/nkantar/Parsenvy/compare>`_ is probably the best way to get started.
+
