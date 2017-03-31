@@ -20,7 +20,7 @@ Examples
 
 .. code-block:: python
 
-    >>> import parsenvy
+    >>> from parsenvy import parsenvy
     >>> parsenvy.bool('BOOL_ENV_VAR')  # BOOL_ENV_VAR=True
     True
     >>> parsenvy.int('INT_ENV_VAR')  # INT_ENV_VAR=13
@@ -37,6 +37,13 @@ Examples
     set(['wat', 'wut', 'wot'])
     >>> parsenvy.dict('DICT_ENV_VAR')  # DICT_ENV_VAR=a:1,b:2
     {'a': '1', 'b': '2'}
+
+Install
+-------
+
+.. code-block:: shell
+
+    pip install parsenvy
 
 Contributing
 ------------
