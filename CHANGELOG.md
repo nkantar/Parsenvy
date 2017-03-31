@@ -5,7 +5,7 @@
 ### Changed
 - Updated `README.rst`
 
-## [0.1]
+## [0.1.0]
 
 ### Added
 - Basic functionality
