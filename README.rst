@@ -24,7 +24,7 @@ Examples
 
 .. code-block:: python
 
-    >>> from parsenvy import parsenvy
+    >>> import parsenvy
     >>> parsenvy.bool('BOOL_ENV_VAR')  # BOOL_ENV_VAR=True
     True
     >>> parsenvy.int('INT_ENV_VAR')  # INT_ENV_VAR=13
