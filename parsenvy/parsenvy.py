@@ -1,5 +1,11 @@
-import __builtin__
 import os
+
+# Python 3 isn't just the future - it's the present
+try:
+    import builtins
+# but that doesn't mean we can't be *a little* backwards compatible
+except ImportError:
+    import __builtin__ as builtins
 
 
 def _env_var(key):
@@ -15,9 +21,9 @@ def bool(arg, default=None):
     falses = ['false', '0']
 
     if var is not None:
-        if __builtin__.str(var).lower() in trues:
+        if builtins.str(var).lower() in trues:
             return True
-        elif __builtin__.str(var).lower() in falses:
+        elif builtins.str(var).lower() in falses:
             return False
         else:
             raise TypeError
@@ -30,7 +36,7 @@ def int(arg, default=None):
 
     if var is not None:
         try:
-            return __builtin__.int(var)
+            return builtins.int(var)
         except ValueError:
             raise TypeError
     else:
@@ -42,7 +48,7 @@ def float(arg, default=None):
 
     if var is not None:
         try:
-            return __builtin__.float(var)
+            return builtins.float(var)
         except ValueError:
             raise TypeError
     else:
@@ -62,7 +68,7 @@ def tuple(arg, default=None):
     val_list = list(arg, default=default)
 
     if val_list is not None:
-        return __builtin__.tuple(val_list)
+        return builtins.tuple(val_list)
     else:
         return val_list
 
@@ -80,7 +86,7 @@ def set(arg, default=None):
     val_list = list(arg, default=default)
 
     if val_list is not None:
-        return __builtin__.set(val_list)
+        return builtins.set(val_list)
     else:
         return val_list
 
