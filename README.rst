@@ -9,11 +9,15 @@ Features
 --------
 
 - Compatible with both Python 2 and 3
-- No dependencies aside from Python's core ``os`` module
-- Type-annotated
+- No dependencies aside from Python's core ``os`` and ``builtins``/``__builtin__`` modules
 - Fully tested
-- Thoroughly documented
 - BSD (3-Clause) licensed
+
+TODO
+----
+
+- Type-annotated
+- Thoroughly documented
 
 Examples
 --------
