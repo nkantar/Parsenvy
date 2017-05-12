@@ -1,5 +1,10 @@
 # Parsenvy Changelog
 
+## [Unreleased]
+
+### Added
+- Travis CI
+
 ## [1.0.0]
 
 ### Changed
@@ -23,6 +28,7 @@
 ### Added
 - Basic functionality
 
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/1.0.0...HEAD
 [1.0.0]: https://github.com/nkantar/Parsenvy/compare/0.1.2...1.0.0
 [0.1.2]: https://github.com/nkantar/Parsenvy/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/nkantar/Parsenvy/compare/0.1.0...0.1.1
