@@ -4,6 +4,7 @@
 
 ### Added
 - Travis CI
+- SayThanks.io badge to README
 
 ## [1.0.0]
 
