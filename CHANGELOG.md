@@ -6,6 +6,7 @@
 - Travis CI
 - SayThanks.io badge to README
 - Code of Conduct
+- Contributing Guidelines
 
 ## [1.0.0]
 
