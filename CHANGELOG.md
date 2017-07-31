@@ -7,6 +7,7 @@
 - SayThanks.io badge to README
 - Code of Conduct
 - Contributing Guidelines
+- GitHub issue/PR templates
 
 ## [1.0.0]
 
