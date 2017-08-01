@@ -7,6 +7,7 @@
 - Fixed bad version linking in the changelog.
 - Added release dates to the changelog.
 - Added Code of Conduct reference to the README.
+- Updated Code of Conduct email.
 
 
 ## [1.0.1] - 2017-07-31
