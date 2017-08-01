@@ -5,9 +5,10 @@
 
 ### Changed
 - Fixed bad version linking in the changelog.
+- Added release dates to the changelog.
 
 
-## [1.0.1]
+## [1.0.1] - 2017-07-31
 
 ### Added
 - Travis CI
@@ -17,13 +18,13 @@
 - GitHub issue/PR templates
 
 
-## [1.0.0]
+## [1.0.0] - 2017-04-28
 
 ### Changed
 - Neater import: `from parsenvy import parsenvy` is now `import parsenvy`.
 
 
-## [0.1.2]
+## [0.1.2] - 2017-04-28
 
 ### Added
 - Support for Python 3
@@ -32,13 +33,13 @@
 - updated `README.rst`
 
 
-## [0.1.1]
+## [0.1.1] - 2017-03-31
 
 ### Changed
 - Updated `README.rst`
 
 
-## [0.1.0]
+## [0.1.0] - 2017-03-31
 
 ### Added
 - Basic functionality
