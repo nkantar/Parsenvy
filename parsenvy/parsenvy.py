@@ -1,24 +1,19 @@
+import builtins
 import os
-
-# Python 3 isn't just the future - it's the present
-try:
-    import builtins
-# but that doesn't mean we can't be *a little* backwards compatible
-except ImportError:
-    import __builtin__ as builtins
+from typing import Any, List, Union
 
 
-def _env_var(key):
+def _env_var(key: builtins.str) -> builtins.str:
     try:
         return os.environ[key]
     except KeyError:
         return None
 
 
-def bool(arg, default=None):
-    var = _env_var(arg)
-    trues = ['true', '1']
-    falses = ['false', '0']
+def bool(arg: builtins.str, default: builtins.bool=None) -> builtins.bool:
+    var: builtins.str = _env_var(arg)
+    trues: List[builtins.str] = ['true', '1']
+    falses: List[builtins.str] = ['false', '0']
 
     if var is not None:
         if builtins.str(var).lower() in trues:
@@ -31,8 +26,8 @@ def bool(arg, default=None):
         return default
 
 
-def int(arg, default=None):
-    var = _env_var(arg)
+def int(arg: builtins.str, default: builtins.int=None) -> builtins.int:
+    var: builtins.str = _env_var(arg)
 
     if var is not None:
         try:
@@ -43,8 +38,8 @@ def int(arg, default=None):
         return default
 
 
-def float(arg, default=None):
-    var = _env_var(arg)
+def float(arg: builtins.str, default: builtins.float=None) -> builtins.float:
+    var: builtins.str = _env_var(arg)
 
     if var is not None:
         try:
@@ -55,26 +50,35 @@ def float(arg, default=None):
         return default
 
 
-def list(arg, default=None):
-    var = _env_var(arg)
+def list(arg: builtins.str,
+         default: Union[builtins.list,
+                        builtins.tuple,
+                        builtins.set]=None) -> builtins.list:
+    var: builtins.str = _env_var(arg)
 
     if var is not None and var != '':
         return var.split(',')
     else:
-        return default
+        try:
+            return builtins.list(default)
+        except TypeError:
+            return None
 
 
-def tuple(arg, default=None):
-    val_list = list(arg, default=default)
+def tuple(arg: builtins.str, default: builtins.tuple=None) -> builtins.tuple:
+    val_list: List[Any] = list(arg, default=default)
 
     if val_list is not None:
         return builtins.tuple(val_list)
     else:
-        return default
+        try:
+            return default
+        except TypeError:
+            return None
 
 
-def str(arg, default=None):
-    var = _env_var(arg)
+def str(arg: builtins.str, default: builtins.str=None) -> builtins.str:
+    var: builtins.str = _env_var(arg)
 
     if var is not None:
         return var
@@ -82,27 +86,31 @@ def str(arg, default=None):
         return default
 
 
-def set(arg, default=None):
-    val_list = list(arg, default=default)
+def set(arg: builtins.str, default: builtins.set=None) -> builtins.set:
+    val_list: builtins.list = list(arg, default=default)
 
     if val_list is not None:
         return builtins.set(val_list)
     else:
-        return default
+        try:
+            return default
+        except TypeError:
+            return None
 
 
-def dict(arg, default=None):
-    var = _env_var(arg)
+def dict(arg: builtins.str, default: builtins.dict=None) -> builtins.dict:
+    var: builtins.str = _env_var(arg)
 
     if var is not None:
         try:
-            pair_list = var.split(',')
-            element_lists = [pair.split(':')
-                             for pair
-                             in pair_list]
-            all_elements = []
-            [all_elements.extend(pair) for pair in element_lists]
-            final_dict = {}
+            pair_list: builtins.list = var.split(',')
+            element_lists: builtins.list = [pair.split(':')
+                                            for pair
+                                            in pair_list]
+            all_elements: builtins.list = []
+            for pair in element_lists:
+                all_elements.extend(pair)
+            final_dict: builtins.dict = {}
             for index, key in enumerate(all_elements):
                 if index % 2 == 0:
                     final_dict.update({key: all_elements[index + 1]})

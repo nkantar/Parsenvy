@@ -10,19 +10,15 @@ Environment variables are strings by default. This can be *rather* inconvenient 
 .. image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg 
    :target: https://saythanks.io/to/nkantar
 
+
 Features
 --------
 
-- Compatible with both Python 2 and 3
-- No dependencies aside from Python's core ``os`` and ``builtins``/``__builtin__`` modules
+- Compatible with Python 3.6+ only (the last Python 2 compatible version was `1.0.2 <https://github.com/nkantar/Parsenvy/releases/tag/1.0.2>`_)
+- No dependencies aside from Python's core ``builtins``, ``os``, and ``typing`` modules
 - Fully tested
 - BSD (3-Clause) licensed
 
-TODO
-----
-
-- Type-annotated
-- Thoroughly documented
 
 Examples
 --------
@@ -47,12 +43,14 @@ Examples
     >>> parsenvy.dict('DICT_ENV_VAR')  # DICT_ENV_VAR=a:1,b:2
     {'a': '1', 'b': '2'}
 
+
 Install
 -------
 
 .. code-block:: shell
 
     pip install parsenvy
+
 
 Contributing
 ------------

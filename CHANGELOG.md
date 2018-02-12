@@ -1,6 +1,16 @@
 # Parsenvy Changelog
 
 
+## [2.0.0] - 2018-02-11
+
+### Added
+- Type hints!
+
+### Removed
+- Python 2 support!
+- Also support for Python 3.2, 3.3, 3.4, 3.5 and PyPy2.7
+
+
 ## [1.0.2] - 2018-02-11
 
 ### Changed
@@ -51,7 +61,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/1.0.2...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/nkantar/Parsenvy/compare/1.0.2...2.0.0
 [1.0.2]: https://github.com/nkantar/Parsenvy/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/nkantar/Parsenvy/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/nkantar/Parsenvy/compare/0.1.2...1.0.0
