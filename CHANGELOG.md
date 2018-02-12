@@ -1,13 +1,14 @@
 # Parsenvy Changelog
 
 
-## [Unreleased]
+## [1.0.2] - 2018-02-11
 
 ### Changed
 - Fixed bad version linking in the changelog.
 - Added release dates to the changelog.
 - Added Code of Conduct reference to the README.
 - Updated Code of Conduct email.
+- Updated first release link from the commit to the release tag.
 
 ## Fixed
 - Two of the functions returned the wrong thing instead of the default.
@@ -50,9 +51,10 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/1.0.1...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/1.0.2...HEAD
+[1.0.2]: https://github.com/nkantar/Parsenvy/compare/1.0.1...1.0.2
 [1.0.1]: https://github.com/nkantar/Parsenvy/compare/1.0.0...1.0.1
 [1.0.0]: https://github.com/nkantar/Parsenvy/compare/0.1.2...1.0.0
 [0.1.2]: https://github.com/nkantar/Parsenvy/compare/0.1.1...0.1.2
 [0.1.1]: https://github.com/nkantar/Parsenvy/compare/0.1.0...0.1.1
-[0.1.0]: https://github.com/nkantar/Parsenvy/commit/34a3ef490e0c2f3fdb03a471181d04e349118c86
+[0.1.0]: https://github.com/nkantar/Parsenvy/releases/tag/0.1.0
