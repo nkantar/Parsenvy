@@ -9,6 +9,9 @@
 - Added Code of Conduct reference to the README.
 - Updated Code of Conduct email.
 
+## Fixed
+- Two of the functions returned the wrong thing instead of the default.
+
 
 ## [1.0.1] - 2017-07-31
 

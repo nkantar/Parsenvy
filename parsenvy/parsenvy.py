@@ -70,7 +70,7 @@ def tuple(arg, default=None):
     if val_list is not None:
         return builtins.tuple(val_list)
     else:
-        return val_list
+        return default
 
 
 def str(arg, default=None):
@@ -88,7 +88,7 @@ def set(arg, default=None):
     if val_list is not None:
         return builtins.set(val_list)
     else:
-        return val_list
+        return default
 
 
 def dict(arg, default=None):
