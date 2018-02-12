@@ -4,4 +4,6 @@ python:
   - "3.6-dev"
   - "3.7-dev"
   - "nightly"
-script: python tests.py
+script:
+  - python tests.py
+  - mypy parsenvy/parsenvy.py
