@@ -1,17 +1,17 @@
 import builtins
 import os
-from typing import Any, List, Union
+from typing import Any, Iterable, List, Optional, Union
 
 
-def _env_var(key: builtins.str) -> builtins.str:
+def _env_var(key: builtins.str) -> Optional[builtins.str]:
     try:
         return os.environ[key]
     except KeyError:
         return None
 
 
-def bool(arg: builtins.str, default: builtins.bool=None) -> builtins.bool:
-    var: builtins.str = _env_var(arg)
+def bool(arg: builtins.str, default: builtins.bool=None) -> Optional[builtins.bool]:
+    var: Optional[builtins.str] = _env_var(arg)
     trues: List[builtins.str] = ['true', '1']
     falses: List[builtins.str] = ['false', '0']
 
@@ -26,8 +26,8 @@ def bool(arg: builtins.str, default: builtins.bool=None) -> builtins.bool:
         return default
 
 
-def int(arg: builtins.str, default: builtins.int=None) -> builtins.int:
-    var: builtins.str = _env_var(arg)
+def int(arg: builtins.str, default: builtins.int=None) -> Optional[builtins.int]:
+    var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
         try:
@@ -38,8 +38,8 @@ def int(arg: builtins.str, default: builtins.int=None) -> builtins.int:
         return default
 
 
-def float(arg: builtins.str, default: builtins.float=None) -> builtins.float:
-    var: builtins.str = _env_var(arg)
+def float(arg: builtins.str, default: builtins.float=None) -> Optional[builtins.float]:
+    var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
         try:
@@ -51,22 +51,20 @@ def float(arg: builtins.str, default: builtins.float=None) -> builtins.float:
 
 
 def list(arg: builtins.str,
-         default: Union[builtins.list,
-                        builtins.tuple,
-                        builtins.set]=None) -> builtins.list:
-    var: builtins.str = _env_var(arg)
+         default: Iterable[Any]=None) -> Optional[builtins.list]:
+    var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None and var != '':
         return var.split(',')
     else:
-        try:
+        if default is not None:
             return builtins.list(default)
-        except TypeError:
+        else:
             return None
 
 
-def tuple(arg: builtins.str, default: builtins.tuple=None) -> builtins.tuple:
-    val_list: List[Any] = list(arg, default=default)
+def tuple(arg: builtins.str, default: builtins.tuple=None) -> Optional[builtins.tuple]:
+    val_list: Optional[List[Any]] = list(arg, default=default)
 
     if val_list is not None:
         return builtins.tuple(val_list)
@@ -77,8 +75,8 @@ def tuple(arg: builtins.str, default: builtins.tuple=None) -> builtins.tuple:
             return None
 
 
-def str(arg: builtins.str, default: builtins.str=None) -> builtins.str:
-    var: builtins.str = _env_var(arg)
+def str(arg: builtins.str, default: builtins.str=None) -> Optional[builtins.str]:
+    var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
         return var
@@ -86,8 +84,8 @@ def str(arg: builtins.str, default: builtins.str=None) -> builtins.str:
         return default
 
 
-def set(arg: builtins.str, default: builtins.set=None) -> builtins.set:
-    val_list: builtins.list = list(arg, default=default)
+def set(arg: builtins.str, default: builtins.set=None) -> Optional[builtins.set]:
+    val_list: Optional[builtins.list] = list(arg, default=default)
 
     if val_list is not None:
         return builtins.set(val_list)
@@ -98,8 +96,8 @@ def set(arg: builtins.str, default: builtins.set=None) -> builtins.set:
             return None
 
 
-def dict(arg: builtins.str, default: builtins.dict=None) -> builtins.dict:
-    var: builtins.str = _env_var(arg)
+def dict(arg: builtins.str, default: builtins.dict=None) -> Optional[builtins.dict]:
+    var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
         try:
