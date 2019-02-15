@@ -10,4 +10,4 @@ install:
 script:
   - python tests.py
   - mypy parsenvy/parsenvy.py
-  - black . --check
+  # - black . --check
