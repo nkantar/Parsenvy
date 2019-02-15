@@ -38,9 +38,7 @@ def int(arg: builtins.str, default: builtins.int = None) -> Optional[builtins.in
         return default
 
 
-def float(
-    arg: builtins.str, default: builtins.float = None
-) -> Optional[builtins.float]:
+def float(arg: builtins.str, default: builtins.float = None) -> Optional[builtins.float]:
     var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
