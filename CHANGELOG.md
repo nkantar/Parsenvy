@@ -1,6 +1,15 @@
 # Parsenvy Changelog
 
 
+## [2.0.2] - 2019-02-15
+
+### Fixed
+- Typing issues were causing Travis CI to fail.
+
+### Changes
+- Dev environment is now managed by Pipenv.
+
+
 ## [2.0.1] - 2018-02-11
 
 ### Added
@@ -67,7 +76,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.1...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.2...HEAD
+[2.0.2]: https://github.com/nkantar/Parsenvy/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/nkantar/Parsenvy/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/nkantar/Parsenvy/compare/1.0.2...2.0.0
 [1.0.2]: https://github.com/nkantar/Parsenvy/compare/1.0.1...1.0.2
