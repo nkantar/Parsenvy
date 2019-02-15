@@ -26,7 +26,7 @@
 - Updated Code of Conduct email.
 - Updated first release link from the commit to the release tag.
 
-## Fixed
+### Fixed
 - Two of the functions returned the wrong thing instead of the default.
 
 
