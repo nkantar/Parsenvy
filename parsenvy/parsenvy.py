@@ -10,10 +10,10 @@ def _env_var(key: builtins.str) -> Optional[builtins.str]:
         return None
 
 
-def bool(arg: builtins.str, default: builtins.bool=None) -> Optional[builtins.bool]:
+def bool(arg: builtins.str, default: builtins.bool = None) -> Optional[builtins.bool]:
     var: Optional[builtins.str] = _env_var(arg)
-    trues: List[builtins.str] = ['true', '1']
-    falses: List[builtins.str] = ['false', '0']
+    trues: List[builtins.str] = ["true", "1"]
+    falses: List[builtins.str] = ["false", "0"]
 
     if var is not None:
         if builtins.str(var).lower() in trues:
@@ -26,7 +26,7 @@ def bool(arg: builtins.str, default: builtins.bool=None) -> Optional[builtins.bo
         return default
 
 
-def int(arg: builtins.str, default: builtins.int=None) -> Optional[builtins.int]:
+def int(arg: builtins.str, default: builtins.int = None) -> Optional[builtins.int]:
     var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
@@ -38,7 +38,9 @@ def int(arg: builtins.str, default: builtins.int=None) -> Optional[builtins.int]
         return default
 
 
-def float(arg: builtins.str, default: builtins.float=None) -> Optional[builtins.float]:
+def float(
+    arg: builtins.str, default: builtins.float = None
+) -> Optional[builtins.float]:
     var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
@@ -50,12 +52,11 @@ def float(arg: builtins.str, default: builtins.float=None) -> Optional[builtins.
         return default
 
 
-def list(arg: builtins.str,
-         default: Iterable[Any]=None) -> Optional[builtins.list]:
+def list(arg: builtins.str, default: Iterable[Any] = None) -> Optional[builtins.list]:
     var: Optional[builtins.str] = _env_var(arg)
 
-    if var is not None and var != '':
-        return var.split(',')
+    if var is not None and var != "":
+        return var.split(",")
     else:
         if default is not None:
             return builtins.list(default)
@@ -63,7 +64,9 @@ def list(arg: builtins.str,
             return None
 
 
-def tuple(arg: builtins.str, default: builtins.tuple=None) -> Optional[builtins.tuple]:
+def tuple(
+    arg: builtins.str, default: builtins.tuple = None
+) -> Optional[builtins.tuple]:
     val_list: Optional[List[Any]] = list(arg, default=default)
 
     if val_list is not None:
@@ -75,7 +78,7 @@ def tuple(arg: builtins.str, default: builtins.tuple=None) -> Optional[builtins.
             return None
 
 
-def str(arg: builtins.str, default: builtins.str=None) -> Optional[builtins.str]:
+def str(arg: builtins.str, default: builtins.str = None) -> Optional[builtins.str]:
     var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
@@ -84,7 +87,7 @@ def str(arg: builtins.str, default: builtins.str=None) -> Optional[builtins.str]
         return default
 
 
-def set(arg: builtins.str, default: builtins.set=None) -> Optional[builtins.set]:
+def set(arg: builtins.str, default: builtins.set = None) -> Optional[builtins.set]:
     val_list: Optional[builtins.list] = list(arg, default=default)
 
     if val_list is not None:
@@ -96,15 +99,13 @@ def set(arg: builtins.str, default: builtins.set=None) -> Optional[builtins.set]
             return None
 
 
-def dict(arg: builtins.str, default: builtins.dict=None) -> Optional[builtins.dict]:
+def dict(arg: builtins.str, default: builtins.dict = None) -> Optional[builtins.dict]:
     var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
         try:
-            pair_list: builtins.list = var.split(',')
-            element_lists: builtins.list = [pair.split(':')
-                                            for pair
-                                            in pair_list]
+            pair_list: builtins.list = var.split(",")
+            element_lists: builtins.list = [pair.split(":") for pair in pair_list]
             all_elements: builtins.list = []
             for pair in element_lists:
                 all_elements.extend(pair)
