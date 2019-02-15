@@ -15,7 +15,7 @@
 ### Fixed
 - Typing issues were causing Travis CI to fail.
 
-### Changes
+### Changed
 - Dev environment is now managed by Pipenv.
 
 
