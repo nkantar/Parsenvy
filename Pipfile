@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 mypy = "*"
+black = "==18.9b0"
 
 [requires]
 python_version = "3.7"
