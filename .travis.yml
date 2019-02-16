@@ -6,7 +6,7 @@ python:
   - "nightly"
 install:
   - pip install pipenv
-  - pipenv install
+  - pipenv install --dev
 script:
   - python tests.py
   - mypy parsenvy/parsenvy.py
