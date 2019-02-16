@@ -1,6 +1,15 @@
 # Parsenvy Changelog
 
 
+## [2.0.4] - 2019-02-15
+
+### Changed
+- Moved mypy and Black to dev dependencies.
+
+### Removed
+- GitHub templates
+
+
 ## [2.0.3] - 2019-02-15
 
 ### Added
@@ -85,7 +94,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.3...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.4...HEAD
+[2.0.4]: https://github.com/nkantar/Parsenvy/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/nkantar/Parsenvy/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/nkantar/Parsenvy/compare/2.0.1...2.0.2
 [2.0.1]: https://github.com/nkantar/Parsenvy/compare/2.0.0...2.0.1
