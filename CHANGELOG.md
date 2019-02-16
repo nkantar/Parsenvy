@@ -1,6 +1,12 @@
 # Parsenvy Changelog
 
 
+## [2.0.5] - 2019-02-15
+
+### Changed
+- Updated setup.py per most recent docs
+
+
 ## [2.0.4] - 2019-02-15
 
 ### Changed
@@ -94,7 +100,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.4...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.5...HEAD
+[2.0.5]: https://github.com/nkantar/Parsenvy/compare/2.0.4...2.0.5
 [2.0.4]: https://github.com/nkantar/Parsenvy/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/nkantar/Parsenvy/compare/2.0.2...2.0.3
 [2.0.2]: https://github.com/nkantar/Parsenvy/compare/2.0.1...2.0.2
