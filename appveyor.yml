@@ -1,0 +1,9 @@
+version: '{branch}-{build}'
+build: "off"
+image: Visual Studio 2015
+install:
+  - pip install pipenv pytest
+  - pipenv --python 3
+  - pipenv install
+test_script:
+  - pipenv run pytest
