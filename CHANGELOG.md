@@ -1,6 +1,12 @@
 # Parsenvy Changelog
 
 
+## [2.0.8] - 2019-02-15
+
+### Changed
+- Fixed bad URL in setup.py.
+
+
 ## [2.0.7] - 2019-02-15
 
 ### Changed
@@ -112,7 +118,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.7...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.8...HEAD
+[2.0.8]: https://github.com/nkantar/Parsenvy/compare/2.0.7...2.0.8
 [2.0.7]: https://github.com/nkantar/Parsenvy/compare/2.0.6...2.0.7
 [2.0.6]: https://github.com/nkantar/Parsenvy/compare/2.0.5...2.0.6
 [2.0.5]: https://github.com/nkantar/Parsenvy/compare/2.0.4...2.0.5
