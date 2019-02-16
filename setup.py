@@ -1,16 +1,16 @@
-from setuptools import setup
+import setuptools
 
-setup(
+with open("README.rst", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
     name="parsenvy",
-    packages=["parsenvy"],
-    version="2.0.4",
-    description="Enviously elegant environment variable parsing",
+    version="2.0.5",
     author="Nik Kantar",
     author_email="nik@nkantar.com",
-    url="https://github.com/nkantar/Parsenvy",
-    download_url="https://github.com/nkantar/Parsenvy/tarball/2.0.4",
-    keywords=["environment variables"],
-    classifiers=[],
-    license="BSD-3-Clause",
-    zip_safe=False,
+    description="Enviously elegant environment variable parsing",
+    long_description=long_description,
+    long_description_content_type="text/rst",
+    url="https://github.com/pypa/sampleproject",
+    packages=setuptools.find_packages(),
 )
