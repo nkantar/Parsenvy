@@ -17,8 +17,8 @@ Features
 --------
 
 - Compatible with Python 3.6+ only (the last Python 2 compatible version was `1.0.2 <https://github.com/nkantar/Parsenvy/releases/tag/1.0.2>`_)
+- Fully tested on `Linux <https://travis-ci.org/nkantar/Parsenvy>`_ and `Windows <https://ci.appveyor.com/api/projects/status/ypywtakntwsf6l00/branch/master?svg=true>`_
 - No dependencies aside from Python's core ``builtins``, ``os``, and ``typing`` modules
-- Fully tested
 - BSD (3-Clause) licensed
 
 
