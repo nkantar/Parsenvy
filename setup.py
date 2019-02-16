@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="Parsenvy",
-    version="2.0.9",
+    version="2.0.10",
     author="Nik Kantar",
     author_email="nik@nkantar.com",
     description="Enviously elegant environment variable parsing",
