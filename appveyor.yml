@@ -2,8 +2,9 @@ version: '{branch}-{build}'
 build: "off"
 image: Visual Studio 2015
 install:
-  - pip install pipenv pytest
+  - pip install pipenv
   - pipenv --python 3
-  - pipenv install
+  - pipenv install --dev
 test_script:
-  - pipenv run pytest
+  - pipenv run python tests.py
+  - pipenv run mypy parsenvy/parsenvy.py
