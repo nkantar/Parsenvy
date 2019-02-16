@@ -1,6 +1,12 @@
 # Parsenvy Changelog
 
 
+## [2.0.6] - 2019-02-15
+
+### Changed
+- Fixed README type in setup.py.
+
+
 ## [2.0.5] - 2019-02-15
 
 ### Changed
@@ -100,7 +106,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.5...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.6...HEAD
+[2.0.6]: https://github.com/nkantar/Parsenvy/compare/2.0.5...2.0.6
 [2.0.5]: https://github.com/nkantar/Parsenvy/compare/2.0.4...2.0.5
 [2.0.4]: https://github.com/nkantar/Parsenvy/compare/2.0.3...2.0.4
 [2.0.3]: https://github.com/nkantar/Parsenvy/compare/2.0.2...2.0.3
