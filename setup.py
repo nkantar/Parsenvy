@@ -4,8 +4,8 @@ with open("README.rst", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="parsenvy",
-    version="2.0.8",
+    name="Parsenvy",
+    version="2.0.9",
     author="Nik Kantar",
     author_email="nik@nkantar.com",
     description="Enviously elegant environment variable parsing",
