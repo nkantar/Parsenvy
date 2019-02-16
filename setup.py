@@ -10,7 +10,7 @@ setuptools.setup(
     author_email="nik@nkantar.com",
     description="Enviously elegant environment variable parsing",
     long_description=long_description,
-    long_description_content_type="text/rst",
+    long_description_content_type="text/x-rst",
     url="https://github.com/pypa/sampleproject",
     packages=setuptools.find_packages(),
 )
