@@ -1,6 +1,12 @@
 # Parsenvy Changelog
 
 
+## [2.1.0] - 2019-05-03
+
+### Deprecated
+- `dict()`
+
+
 ## [2.0.10] - 2019-02-15
 
 ### Added
@@ -130,7 +136,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.0.10...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.1.0...HEAD
+[2.1.0]: https://github.com/nkantar/Parsenvy/compare/2.0.10...2.1.0
 [2.0.10]: https://github.com/nkantar/Parsenvy/compare/2.0.9...2.0.10
 [2.0.9]: https://github.com/nkantar/Parsenvy/compare/2.0.8...2.0.9
 [2.0.8]: https://github.com/nkantar/Parsenvy/compare/2.0.7...2.0.8
