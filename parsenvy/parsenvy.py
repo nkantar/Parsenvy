@@ -100,6 +100,8 @@ def set(arg: builtins.str, default: builtins.set = None) -> Optional[builtins.se
 
 
 def dict(arg: builtins.str, default: builtins.dict = None) -> Optional[builtins.dict]:
+    print("[WARNING] parsenvy.dict() will be deprecated in version 3.")
+
     var: Optional[builtins.str] = _env_var(arg)
 
     if var is not None:
