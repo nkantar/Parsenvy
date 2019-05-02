@@ -9,8 +9,6 @@ Environment variables are strings by default. This can be *rather* inconvenient 
     :target: https://travis-ci.org/nkantar/Parsenvy
 .. image:: https://ci.appveyor.com/api/projects/status/ypywtakntwsf6l00/branch/master?svg=true
     :target: https://ci.appveyor.com/project/nkantar/Parsenvy
-.. image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg 
-   :target: https://saythanks.io/to/nkantar
 
 
 Features
