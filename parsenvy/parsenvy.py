@@ -65,16 +65,11 @@ def float(
         )
 
 
-def list(
-    arg: builtins.str, default: Optional[List[Any]] = None
-) -> Optional[List[Any]]:
+def list(arg: builtins.str, default: Optional[List[Any]] = None) -> Optional[List[Any]]:
     value = os.environ.get(arg)
 
     if value is None or value == "":
-        if default is None:
-            return None
-
-        return builtins.list(default)
+        return default
 
     return value.split(",")
 
