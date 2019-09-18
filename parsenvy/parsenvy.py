@@ -25,7 +25,10 @@ def bool(
     if value.lower() in FALSES:
         return False
 
-    raise ValueError("Parsenvy accepts 'true', '1', 'false', and '0' boolean values.")
+    raise ValueError(
+        f"Invalid boolean value specified: {value}\n"
+        "Parsenvy accepts 'true', '1', 'false', and '0' as boolean values."
+    )
 
 
 def int(
