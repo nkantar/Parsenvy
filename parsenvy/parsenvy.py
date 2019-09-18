@@ -97,27 +97,3 @@ def set(arg: builtins.str, default: builtins.set = None) -> Optional[builtins.se
             return default
         except TypeError:
             return None
-
-
-def dict(arg: builtins.str, default: builtins.dict = None) -> Optional[builtins.dict]:
-    print("[WARNING] parsenvy.dict() will be deprecated in version 3.")
-
-    var: Optional[builtins.str] = _env_var(arg)
-
-    if var is not None:
-        try:
-            pair_list: builtins.list = var.split(",")
-            element_lists: builtins.list = [pair.split(":") for pair in pair_list]
-            all_elements: builtins.list = []
-            for pair in element_lists:
-                all_elements.extend(pair)
-            final_dict: builtins.dict = {}
-            for index, key in enumerate(all_elements):
-                if index % 2 == 0:
-                    final_dict.update({key: all_elements[index + 1]})
-        except IndexError:
-            raise TypeError
-
-        return final_dict
-    else:
-        return default

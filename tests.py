@@ -140,24 +140,5 @@ class SetTest(unittest.TestCase):
         self.assertEqual(parsenvy.set("SET_NONE", set([1, 2])), set([1, 2]))
 
 
-class DictTest(unittest.TestCase):
-    def test_dict(self):
-        os.environ["DICT_A_1_B_2"] = "a:1,b:2"
-        self.assertEqual(parsenvy.dict("DICT_A_1_B_2"), {"a": "1", "b": "2"})
-
-    def test_none(self):
-        self.assertIsNone(parsenvy.dict("DICT_NONE"))
-
-    def test_default(self):
-        self.assertEqual(
-            parsenvy.dict("DICT_NONE", {"a": "1", "b": "2"}), {"a": "1", "b": "2"}
-        )
-
-    def test_error(self):
-        os.environ["DICT_EMPTY"] = ""
-        with self.assertRaises(TypeError):
-            parsenvy.dict("DICT_EMPTY")
-
-
 if __name__ == "__main__":
     unittest.main()
