@@ -1,0 +1,6 @@
+__name__ = "Parsenvy"
+__version__ = "2.0.10"
+__author__ = "Nik Kantar"
+__author_email__ = "nik@nkantar.com"
+__description__ = "Enviously elegant environment variable parsing"
+__url__ = "https://github.com/nkantar/Parsenvy"
