@@ -84,6 +84,7 @@ class ListTest(unittest.TestCase):
     def test_none(self):
         self.assertIsNone(parsenvy.list("LIST_NONE"))
 
+    def test_empty(self):
         os.environ["LIST_EMPTY"] = ""
         self.assertIsNone(parsenvy.list("LIST_EMPTY"))
 

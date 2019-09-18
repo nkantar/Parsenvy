@@ -68,15 +68,15 @@ def float(
 def list(
     arg: builtins.str, default: Optional[Iterable[Any]] = None
 ) -> Optional[List[Any]]:
-    var: Optional[builtins.str] = _env_var(arg)
+    value = os.environ.get(arg)
 
-    if var is not None and var != "":
-        return var.split(",")
-    else:
-        if default is not None:
-            return builtins.list(default)
-        else:
+    if value is None or value == "":
+        if default is None:
             return None
+
+        return builtins.list(default)
+
+    return value.split(",")
 
 
 def tuple(
