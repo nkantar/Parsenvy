@@ -4,10 +4,7 @@ from typing import Any, Iterable, List, Optional, Set, Tuple, Union
 
 
 def _env_var(key: builtins.str) -> Optional[builtins.str]:
-    try:
-        return os.environ[key]
-    except KeyError:
-        return None
+    return os.environ.get(key, None)
 
 
 def bool(
