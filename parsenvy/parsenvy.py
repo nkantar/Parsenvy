@@ -34,15 +34,18 @@ def bool(
 def int(
     arg: builtins.str, default: Optional[builtins.int] = None
 ) -> Optional[builtins.int]:
-    var: Optional[builtins.str] = _env_var(arg)
+    value = os.environ.get(arg)
 
-    if var is not None:
-        try:
-            return builtins.int(var)
-        except ValueError:
-            raise TypeError
-    else:
+    if value is None:
         return default
+
+    try:
+        return builtins.int(value)
+    except ValueError:
+        raise TypeError(
+            f"Invalid integer value specified: {value}\n"
+            "Parsenvy accepts only valid integers as integer values."
+        )
 
 
 def float(
