@@ -91,12 +91,12 @@ def tuple(
 def str(
     arg: builtins.str, default: Optional[builtins.str] = None
 ) -> Optional[builtins.str]:
-    var: Optional[builtins.str] = _env_var(arg)
+    value = os.environ.get(arg)
 
-    if var is not None:
-        return var
-    else:
+    if value is None or value == "":
         return default
+
+    return value
 
 
 def set(arg: builtins.str, default: Optional[Set[Any]] = None) -> Optional[Set[Any]]:

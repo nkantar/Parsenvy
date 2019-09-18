@@ -116,8 +116,10 @@ class StringTest(unittest.TestCase):
     def test_list(self):
         os.environ["STR_HELLO"] = "hello"
         self.assertEqual(parsenvy.str("STR_HELLO"), "hello")
+
+    def test_empty(self):
         os.environ["STR_EMPTY"] = ""
-        self.assertEqual(parsenvy.str("STR_EMPTY"), "")
+        self.assertIsNone(parsenvy.str("STR_EMPTY"))
 
     def test_none(self):
         self.assertIsNone(parsenvy.str("STR_NONE"))
