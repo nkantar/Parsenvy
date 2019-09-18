@@ -7,22 +7,25 @@ def _env_var(key: builtins.str) -> Optional[builtins.str]:
     return os.environ.get(key, None)
 
 
+TRUES = ["true", "1"]
+FALSES = ["false", "0"]
+
+
 def bool(
     arg: builtins.str, default: Optional[builtins.bool] = None
 ) -> Optional[builtins.bool]:
-    var: Optional[builtins.str] = _env_var(arg)
-    trues: List[builtins.str] = ["true", "1"]
-    falses: List[builtins.str] = ["false", "0"]
+    var = os.environ.get(arg)
 
-    if var is not None:
-        if builtins.str(var).lower() in trues:
-            return True
-        elif builtins.str(var).lower() in falses:
-            return False
-        else:
-            raise TypeError
-    else:
+    if var is None:
         return default
+
+    if var.lower() in TRUES:
+        return True
+
+    if var.lower() in FALSES:
+        return False
+
+    raise ValueError("Parsenvy accepts 'true', '1', 'false', and '0' boolean values.")
 
 
 def int(

@@ -26,11 +26,11 @@ class BooleanTest(unittest.TestCase):
 
     def test_error(self):
         os.environ["BOOL_EMPTY"] = ""
-        with self.assertRaises(TypeError):
+        with self.assertRaises(ValueError):
             parsenvy.bool("BOOL_EMPTY")
 
         os.environ["BOOL_STR"] = "nope"
-        with self.assertRaises(TypeError):
+        with self.assertRaises(ValueError):
             parsenvy.bool("BOOL_STR")
 
 
