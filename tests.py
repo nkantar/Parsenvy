@@ -136,6 +136,7 @@ class SetTest(unittest.TestCase):
     def test_none(self):
         self.assertIsNone(parsenvy.set("SET_NONE"))
 
+    def test_empty(self):
         os.environ["SET_EMPTY"] = ""
         self.assertIsNone(parsenvy.set("SET_EMPTY"))
 

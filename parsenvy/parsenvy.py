@@ -100,12 +100,9 @@ def str(
 
 
 def set(arg: builtins.str, default: Optional[Set[Any]] = None) -> Optional[Set[Any]]:
-    val_list: Optional[List[Any]] = list(arg, default=default)
+    value = os.environ.get(arg)
 
-    if val_list is not None:
-        return builtins.set(val_list)
-    else:
-        try:
-            return default
-        except TypeError:
-            return None
+    if value is None or value == "":
+        return default
+
+    return builtins.set(value.split(","))
