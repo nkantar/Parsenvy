@@ -51,15 +51,18 @@ def int(
 def float(
     arg: builtins.str, default: Optional[builtins.float] = None
 ) -> Optional[builtins.float]:
-    var: Optional[builtins.str] = _env_var(arg)
+    value = os.environ.get(arg)
 
-    if var is not None:
-        try:
-            return builtins.float(var)
-        except ValueError:
-            raise TypeError
-    else:
+    if value is None:
         return default
+
+    try:
+        return builtins.float(value)
+    except ValueError:
+        raise TypeError(
+            f"Invalid float value specified: {float}\n"
+            "Parsenvy accepts only valid floats and integers as float values"
+        )
 
 
 def list(
