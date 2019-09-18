@@ -3,10 +3,6 @@ import os
 from typing import Any, List, Optional, Set, Tuple, Union
 
 
-def _env_var(key: builtins.str) -> Optional[builtins.str]:
-    return os.environ.get(key, None)
-
-
 TRUES = ["true", "1"]
 FALSES = ["false", "0"]
 
