@@ -14,15 +14,15 @@ FALSES = ["false", "0"]
 def bool(
     arg: builtins.str, default: Optional[builtins.bool] = None
 ) -> Optional[builtins.bool]:
-    var = os.environ.get(arg)
+    value = os.environ.get(arg)
 
-    if var is None:
+    if value is None:
         return default
 
-    if var.lower() in TRUES:
+    if value.lower() in TRUES:
         return True
 
-    if var.lower() in FALSES:
+    if value.lower() in FALSES:
         return False
 
     raise ValueError("Parsenvy accepts 'true', '1', 'false', and '0' boolean values.")
