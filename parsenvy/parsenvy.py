@@ -1,6 +1,6 @@
 import builtins
 import os
-from typing import Any, Iterable, List, Optional, Set, Tuple, Union
+from typing import Any, List, Optional, Set, Tuple, Union
 
 
 def _env_var(key: builtins.str) -> Optional[builtins.str]:
@@ -66,7 +66,7 @@ def float(
 
 
 def list(
-    arg: builtins.str, default: Optional[Iterable[Any]] = None
+    arg: builtins.str, default: Optional[List[Any]] = None
 ) -> Optional[List[Any]]:
     value = os.environ.get(arg)
 
