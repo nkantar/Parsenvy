@@ -102,6 +102,7 @@ class TupleTest(unittest.TestCase):
     def test_none(self):
         self.assertIsNone(parsenvy.tuple("TUPLE_NONE"))
 
+    def test_empty(self):
         os.environ["TUPLE_EMPTY"] = ""
         self.assertIsNone(parsenvy.tuple("TUPLE_EMPTY"))
 

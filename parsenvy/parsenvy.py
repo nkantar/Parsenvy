@@ -75,17 +75,14 @@ def list(arg: builtins.str, default: Optional[List[Any]] = None) -> Optional[Lis
 
 
 def tuple(
-    arg: builtins.str, default: Optional[Tuple[Any]] = None
-) -> Optional[Tuple[Any]]:
-    val_list: Optional[List[Any]] = list(arg, default=default)
+    arg: builtins.str, default: Optional[Tuple[Any, ...]] = None
+) -> Optional[Tuple[Any, ...]]:
+    value = os.environ.get(arg)
 
-    if val_list is not None:
-        return builtins.tuple(val_list)
-    else:
-        try:
-            return default
-        except TypeError:
-            return None
+    if value is None or value == "":
+        return default
+
+    return builtins.tuple(value.split(","))
 
 
 def str(
