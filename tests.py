@@ -22,7 +22,7 @@ class BooleanTest(unittest.TestCase):
         self.assertIsNone(parsenvy.bool("BOOL_NONE"))
 
     def test_default(self):
-        self.assertTrue(parsenvy.bool("BOOL_NONE", True))
+        self.assertIsNone(parsenvy.bool("BOOL_NONE"))
 
     def test_error(self):
         os.environ["BOOL_EMPTY"] = ""
