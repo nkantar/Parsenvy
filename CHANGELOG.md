@@ -39,6 +39,12 @@ Types of changes:
 - `dict()`
 
 
+## [2.1.0] - 2019-05-03
+
+### Deprecated
+- `dict()`
+
+
 ## [2.0.10] - 2019-02-15
 
 ### Added
