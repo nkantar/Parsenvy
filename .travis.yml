@@ -11,4 +11,4 @@ install:
 script:
   - pipenv run pytest tests.py
   # - mypy parsenvy/parsenvy.py
-  # - black . --check
+  - black . --check
