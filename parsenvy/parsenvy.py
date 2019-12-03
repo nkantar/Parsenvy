@@ -28,10 +28,10 @@ def bool(
 ) -> Optional[builtins.bool]:
     value = os.environ.get(arg)
 
-    if value.lower() in TRUES:
+    if value.lower() in TRUES:  # type: ignore
         return True
 
-    if value.lower() in FALSES:
+    if value.lower() in FALSES:  # type: ignore
         return False
 
     raise ValueError(
@@ -47,7 +47,7 @@ def int(
     value = os.environ.get(arg)
 
     try:
-        return builtins.int(value)
+        return builtins.int(value)  # type: ignore
     except ValueError:
         raise TypeError(
             f"Invalid integer value specified: {value}\n"
@@ -62,7 +62,7 @@ def float(
     value = os.environ.get(arg)
 
     try:
-        return builtins.float(value)
+        return builtins.float(value)  # type: ignore
     except ValueError:
         raise TypeError(
             f"Invalid float value specified: {float}\n"
@@ -77,7 +77,7 @@ def list(arg: builtins.str, default: Optional[List[Any]] = None) -> Optional[Lis
     if value == "":
         return default
 
-    return value.split(",")
+    return value.split(",")  # type: ignore
 
 
 @default_if_none
@@ -89,7 +89,7 @@ def tuple(
     if value == "":
         return default
 
-    return builtins.tuple(value.split(","))
+    return builtins.tuple(value.split(","))  # type: ignore
 
 
 @default_if_none
