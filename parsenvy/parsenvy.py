@@ -8,7 +8,7 @@ TRUES = ["true", "1"]
 FALSES = ["false", "0"]
 
 
-def default_if_none(func: Callable[[str, Any], Any]) -> Optional[Any]:
+def default_if_none(func: Callable[[builtins.str, Any], Any]) -> Optional[Any]:
     @wraps(func)
     def wrapper_default_if_none(*args, **kwargs):
         if os.environ.get(args[0]) is None:
