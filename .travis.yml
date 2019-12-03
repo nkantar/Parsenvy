@@ -9,6 +9,6 @@ install:
   - pip install pipenv
   - pipenv install --dev
 script:
-  - pipenv run pytest tests.py
-  # - mypy parsenvy/parsenvy.py
-  - black . --check
+  - pipenv run pytest
+  # - pipenv run mypy parsenvy/
+  - pipenv run black . --check
