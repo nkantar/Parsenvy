@@ -1,5 +1,37 @@
 # Parsenvy Changelog
 
+<!--
+Types of changes:
+- Added for new features.
+- Changed for changes in existing functionality.
+- Deprecated for soon-to-be removed features.
+- Removed for now removed features.
+- Fixed for any bug fixes.
+- Security in case of vulnerabilities.
+-->
+
+
+## [3.0.0] - 2019-09-17
+
+### Added
+- Pytest dev dependency
+
+### Changed
+- Moved metadata to `__version__.py`.
+- Refactored implementation of every remaining function.
+- Refactored tests
+- Updated CI config
+
+### Deprecated
+
+### Removed
+- `parsenvy.dict()`
+
+### Fixed
+- `mypy --strict` issues
+
+### Security
+
 
 ## [2.1.0] - 2019-05-02
 
@@ -136,7 +168,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.1.0...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/3.0.0...HEAD
+[3.0.0]: https://github.com/nkantar/Parsenvy/compare/2.1.0...3.0.0
 [2.1.0]: https://github.com/nkantar/Parsenvy/compare/2.0.10...2.1.0
 [2.0.10]: https://github.com/nkantar/Parsenvy/compare/2.0.9...2.0.10
 [2.0.9]: https://github.com/nkantar/Parsenvy/compare/2.0.8...2.0.9
