@@ -10,14 +10,14 @@ FALSES = ["false", "0"]
 
 def default_if_none(func: Callable[[builtins.str, Any], Any]) -> Optional[Any]:
     @wraps(func)
-    def wrapper_default_if_none(*args, **kwargs):
+    def wrapper_default_if_none(*args: Any, **kwargs: Any) -> Optional[Any]:
         if os.environ.get(args[0]) is None:
             try:
                 return args[1]
             except IndexError:
                 return None
 
-        return func(*args, **kwargs)
+        return func(*args, **kwargs)  # type: ignore
 
     return wrapper_default_if_none
 

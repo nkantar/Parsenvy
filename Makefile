@@ -11,7 +11,7 @@ test: ## run tests and code coverage via pytest and coverage.py
 
 
 typecheck: ## run type check via mypy
-	pipenv run mypy parsenvy/
+	pipenv run mypy parsenvy/ --strict
 
 
 formatcheck: ## run format check via black
