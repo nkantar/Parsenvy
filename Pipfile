@@ -8,6 +8,8 @@ pytest = "*"
 mypy = "*"
 black = "*"
 atomicwrites = "*"
+coverage = "*"
+pytest-cov = "*"
 
 [packages]
 

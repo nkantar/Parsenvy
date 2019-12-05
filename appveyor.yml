@@ -6,6 +6,6 @@ install:
   - pipenv --python 3
   - pipenv install --dev
 test_script:
-  - pipenv run pytest
+  - pipenv run pytest --cov=parsenvy/ --cov-fail-under=100
   - pipenv run mypy parsenvy/
   - pipenv run black . --check
