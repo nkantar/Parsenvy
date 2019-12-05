@@ -9,6 +9,4 @@ install:
   - pip install pipenv
   - pipenv install --dev
 script:
-  - pipenv run pytest --cov=parsenvy/ --cov-fail-under=100
-  - pipenv run mypy parsenvy/ --strict
-  - pipenv run black . --check
+  - make validate
