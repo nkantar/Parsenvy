@@ -28,10 +28,6 @@ python_paths = "parsenvy"
 
 [tool.coverage.run]
 branch = true
-omit = [
-  "*/migrations/*",
-  "*/urls.py",
-]
 
 [tool.coverage.report]
 show_missing = true
