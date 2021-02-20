@@ -5,7 +5,7 @@ help: ## this help dialog
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 formatcheck: ## check formatting with black
-	poetry run black --check .
+	poetry run black --check parsenvy/parsenvy.py
 
 lint: ## lint with flake8
 	poetry run flake8 parsenvy/parsenvy.py
