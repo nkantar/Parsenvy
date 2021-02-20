@@ -18,6 +18,7 @@ pytest-watch = "^4.2.0"
 coverage = "^5.4"
 pytest-cov = "^2.11.1"
 pytest-pythonpath = "^0.7.3"
+Sphinx = "^3.5.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

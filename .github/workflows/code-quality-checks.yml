@@ -41,10 +41,10 @@ jobs:
         run: make lint
 
       # - name: Check docstring formatting
-      #   run: make docstringcheck # TODO
+      #   run: make doccheck # TODO
 
-      # - name: Check doc site build
-      #   run: make docbuildcheck
+      - name: Check doc site build
+        run: make docs
 
       # - name: Check type annotations
       #   run: make typecheck # TODO

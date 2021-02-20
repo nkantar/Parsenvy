@@ -1,5 +1,5 @@
 .DEFAULT_GOAL := help
-.PHONY: help formatcheck lint docstringcheck dockbuildcheck typecheck test test-watch covcheck
+.PHONY: help formatcheck lint doccheck docs typecheck test test-watch covcheck docs
 
 help: ## this help dialog
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
@@ -10,11 +10,11 @@ formatcheck: ## check formatting with black
 lint: ## lint with flake8
 	poetry run flake8 parsenvy/parsenvy.py
 
-docstringcheck: ## check code docs with pydocstyle
+doccheck: ## check code docs with pydocstyle
 	poetry run pydocstyle parsenvy/parsenvy.py
 
-docbuildcheck: ## check documentation site build
-	echo "TODO" # TODO
+docs: ## build docs site
+	make -C docs html
 
 typecheck: ## check type hints with mypy
 	poetry run mypy --strict parsenvy/parsenvy.py # TODO
