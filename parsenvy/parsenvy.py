@@ -72,10 +72,7 @@ def tuple(
     if val_list is not None:
         return builtins.tuple(val_list)
     else:
-        try:
-            return default
-        except TypeError:
-            return None
+        return default
 
 
 def str(arg: builtins.str, default: builtins.str = None) -> Optional[builtins.str]:
@@ -93,10 +90,7 @@ def set(arg: builtins.str, default: builtins.set = None) -> Optional[builtins.se
     if val_list is not None:
         return builtins.set(val_list)
     else:
-        try:
-            return default
-        except TypeError:
-            return None
+        return default
 
 
 def dict(arg: builtins.str, default: builtins.dict = None) -> Optional[builtins.dict]:
