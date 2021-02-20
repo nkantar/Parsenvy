@@ -49,8 +49,8 @@ jobs:
       # - name: Check type annotations
       #   run: make typecheck # TODO
 
-      # - name: Run tests
-      #   run: make test
+      - name: Run tests
+        run: make test
 
-      # - name: Check code coverage
-      #   run: make covcheck
+      - name: Check code coverage
+        run: make covcheck
