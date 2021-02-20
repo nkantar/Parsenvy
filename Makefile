@@ -8,7 +8,7 @@ formatcheck: ## check formatting with black
 	poetry run black --check .
 
 lint: ## lint with flake8
-	poetry run flake8 .
+	poetry run flake8 parsenvy/parsenvy.py
 
 docstringcheck: ## check code docs with pydocstyle
 	poetry run pydocstyle .

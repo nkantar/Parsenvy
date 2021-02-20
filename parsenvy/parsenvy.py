@@ -1,6 +1,6 @@
 import builtins
 import os
-from typing import Any, Iterable, List, Optional, Union
+from typing import Any, Iterable, List, Optional
 
 
 def _env_var(key: builtins.str) -> Optional[builtins.str]:
