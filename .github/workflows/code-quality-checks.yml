@@ -1,0 +1,58 @@
+name: Code quality checks
+
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - prod
+  pull_request:
+
+jobs:
+  code_quality:
+    name: Check code quality
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.6, 3.7, 3.8, 3.9]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+          source $HOME/.poetry/env
+          poetry config virtualenvs.create false
+          poetry install --no-root --no-interaction
+          python -m pip install --upgrade pip
+
+      - name: Check code formatting
+        run: make formatcheck
+
+      # - name: Check for linter errors
+      #   run: make lint
+
+      # - name: Check docstring formatting
+      #   run: make docstringcheck
+
+      # - name: Check doc site build
+      #   run: make docbuildcheck
+
+      # - name: Check type annotations
+      #   run: make typecheck
+
+      # - name: Run tests
+      #   run: make test
+
+      # - name: Check code coverage
+      #   run: make covcheck
