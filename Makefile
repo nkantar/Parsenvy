@@ -11,7 +11,7 @@ lint: ## lint with flake8
 	poetry run flake8 parsenvy/parsenvy.py
 
 docstringcheck: ## check code docs with pydocstyle
-	poetry run pydocstyle .
+	poetry run pydocstyle parsenvy/parsenvy.py
 
 docbuildcheck: ## check documentation site build
 	echo "TODO"  # TODO

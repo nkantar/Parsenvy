@@ -41,7 +41,7 @@ jobs:
         run: make lint
 
       # - name: Check docstring formatting
-      #   run: make docstringcheck
+      #   run: make docstringcheck # TODO
 
       # - name: Check doc site build
       #   run: make docbuildcheck
