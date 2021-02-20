@@ -14,7 +14,7 @@ docstringcheck: ## check code docs with pydocstyle
 	poetry run pydocstyle parsenvy/parsenvy.py
 
 docbuildcheck: ## check documentation site build
-	echo "TODO"  # TODO
+	echo "TODO" # TODO
 
 typecheck: ## check type hints with mypy
 	poetry run mypy --strict parsenvy/parsenvy.py # TODO
