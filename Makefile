@@ -17,7 +17,7 @@ docbuildcheck: ## check documentation site build
 	echo "TODO"  # TODO
 
 typecheck: ## check type hints with mypy
-	poetry run mypy --strict .
+	poetry run mypy --strict parsenvy/parsenvy.py # TODO
 
 test: ## run tests with pytest
 	poetry run pytest --cov=parsenvy -vv
