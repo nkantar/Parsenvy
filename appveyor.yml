@@ -2,9 +2,10 @@ version: '{branch}-{build}'
 build: "off"
 image: Visual Studio 2015
 install:
+  - curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
   - pip install pipenv
-  - pipenv --python 3
-  - pipenv install --dev
+  - poetry install
 test_script:
-  - pipenv run python tests.py
-  - pipenv run mypy parsenvy/parsenvy.py
+  - poetry run python tests.py
+  - poetry run mypy parsenvy/parsenvy.py
+  - poetry run black --check .
