@@ -47,3 +47,8 @@ You are encouraged to run them locally as you work for a much faster feedback lo
 | `make typecheck` | Run the `mypy` type checker to validate the type annotations are valid. _Currently disabled._ |
 | `make test` | Run tests to validate they all pass. |
 | `make covcheck` | Calculate test coverage to validate all code paths are executed at least once. |
+
+
+### Docstring standards
+
+The project uses the [Google style](https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html) of docstrings.
