@@ -1,0 +1,39 @@
+name: PyPI publishing
+
+on:
+  push:
+  create:
+
+jobs:
+  pypi_publish:
+    name: Publish to PyPI
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
+
+      # - name: Set up Python 3.9
+      #   uses: actions/setup-python@v2
+      #   with:
+      #     python-version: 3.9
+
+      # - name: Install dependencies
+      #   run: sh bin/cicd_install.sh
+
+      # - 
+
+
+
+
+
+# if: contains(github.ref, 'refs/tags/')
