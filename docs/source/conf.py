@@ -1,4 +1,5 @@
-import sphinx_rtd_theme
+import os
+import sys
 
 
 # Configuration file for the Sphinx documentation builder.
@@ -12,17 +13,14 @@ import sphinx_rtd_theme
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath("./../.."))
 
 
 # -- Project information -----------------------------------------------------
 
 project = "Parsenvy"
-copyright = "2021, nkantar"
-author = "nkantar"
+copyright = "2021, Nik Kantar <nik@nkantar.com>"
+author = "Nik Kantar <nik@nkantar.com>"
 
 # The full version, including alpha/beta/rc tags
 release = "2.1.0"
@@ -33,7 +31,11 @@ release = "2.1.0"
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ["sphinx_rtd_theme"]
+extensions = [
+    "sphinx.ext.autodoc",
+    "sphinx.ext.napoleon",
+    "sphinx_rtd_theme",
+]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ["_templates"]
