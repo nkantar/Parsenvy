@@ -36,10 +36,6 @@ Examples
     >>> parsenvy.set('SET_ENV_VAR')  # SET_ENV_VAR=wat,wut,wot
     set(['wat', 'wut', 'wot'])
 
-    # Note: Version 3 will deprecate parsenvy.dict().
-    >>> parsenvy.dict('DICT_ENV_VAR')  # DICT_ENV_VAR=a:1,b:2
-    {'a': '1', 'b': '2'}
-
 
 Install
 -------
