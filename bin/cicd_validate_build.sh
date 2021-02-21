@@ -14,7 +14,7 @@ fi;
 mkdir "validate_$STAGE"
 cd "validate_$STAGE"
 python -m venv "venv_$STAGE"
-source "venv_$STAGE/bin/activate"
+. "venv_$STAGE/bin/activate"
 pip install $INDEX_URL parsenvy=="$VERSION"
 TEST_INT=42 python -c "import parsenvy; assert parsenvy.int('TEST_INT') == '42'"
 deactivate
