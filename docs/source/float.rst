@@ -9,8 +9,12 @@ Float
 Usage
 -----
 
+.. code-block:: shell
+
+    export INT_ENV_VAR=1.2
+
 .. code-block:: python
 
     >>> import parsenvy
     >>> parsenvy.float('FLOAT_ENV_VAR')
-    True
+    1.2
