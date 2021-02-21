@@ -5,7 +5,10 @@ import parsenvy
 
 @pytest.fixture(scope="function")
 def func():
+    """Dummy function fixture."""
+
     def inner_func(arg, default=None):
+        """Dummy function."""
         return arg
 
     return inner_func
