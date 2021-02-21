@@ -1,5 +1,8 @@
 #!/usr/bin/env sh
 
+set -x
+set -e
+
 STAGE=$1
 VERSION=$2
 INDEX_URL=""
