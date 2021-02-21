@@ -11,7 +11,7 @@ Usage
 
 .. code-block:: shell
 
-    export INT_ENV_VAR=1.2
+    export FLOAT_ENV_VAR=1.2
 
 .. code-block:: python
 
