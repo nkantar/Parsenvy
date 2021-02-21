@@ -14,21 +14,37 @@ jobs:
       fail-fast: true
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
 
-      # - name: Set up Python 3.9
-      #   uses: actions/setup-python@v2
-      #   with:
-      #     python-version: 3.9
+      if: contains(github.ref, 'refs/tags/'):
 
-      # - name: Install dependencies
-      #   run: sh bin/cicd_install.sh
+        - name: Checkout repository
+          uses: actions/checkout@v2
 
-      # - 
+        - name: Set up Python 3.9
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.9
 
+        - name: Install dependencies
+          run: sh bin/cicd_install.sh
 
+        #########################
+        # Test PyPI
 
+        - name: Configure Test Pypi
+          run: poetry config repositories.testpypi https://test.pypi.org/legacy/
 
+        - name: Publish to Test PyPI
+          run: poetry publish --build -r testpypi
 
-# if: contains(github.ref, 'refs/tags/')
+        - name: Validate test build
+          run: sh bin/cicd_validate_build.sh test $(poetry version -s)
+
+        #########################
+        # PyPI
+
+        # - name: Publish to PyPI
+        #   run: poetry publish
+          
+        # - name: Validate build
+        #   run: sh in/cicd_validate_production_build.sh
