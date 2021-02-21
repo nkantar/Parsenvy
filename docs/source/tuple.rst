@@ -11,5 +11,5 @@ Usage
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.bool('TUPLE_ENV_VAR')
+    >>> parsenvy.tuple('TUPLE_ENV_VAR')
     (,)
