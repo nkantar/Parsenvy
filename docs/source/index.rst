@@ -1,6 +1,6 @@
-######################
-Parsenvy documentation
-######################
+####
+Home
+####
 
 .. include:: ../../README.rst
 
