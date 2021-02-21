@@ -9,6 +9,10 @@ Boolean
 Usage
 -----
 
+.. code-block:: shell
+
+    export BOOL_ENV_VAR=true
+
 .. code-block:: python
 
     >>> import parsenvy
