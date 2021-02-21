@@ -8,6 +8,10 @@ Parsenvy: Enviously Elegant Environment Variable Parsing
         :target: https://github.com/nkantar/Parsenvy/actions/workflows/code-quality-checks.yml
         :alt: Github Actions
 
+.. image:: https://badge.fury.io/py/Parsenvy.svg
+        :target: https://badge.fury.io/py/Parsenvy
+        :alt: badgefury svg
+
 .. image:: https://readthedocs.org/projects/parsenvy/badge/?version=latest&style=plastic
         :target: https://parsenvy.readthedocs.io/en/latest
         :alt: main Documentation Status
