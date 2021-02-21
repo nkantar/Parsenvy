@@ -9,7 +9,7 @@ Parsenvy: Enviously Elegant Environment Variable Parsing
         :alt: Github Actions
 
 .. image:: https://readthedocs.org/projects/parsenvy/badge/?version=main
-        :target: https://docs.pylonsproject.org/projects/parsenvy/en/main
+        :target: https://parsenvy.readthedocs.io/en/latest
         :alt: main Documentation Status
 
 Environment variables are strings by default. This can be *rather* inconvenient if you're dealing with a number of them, and in a variety of desired types. Parsenvy aims to provide an intuitive, explicit interface for retrieving these values in appropriate types with *human-friendly* syntax.
