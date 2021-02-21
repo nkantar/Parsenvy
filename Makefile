@@ -17,7 +17,7 @@ docs: ## build docs site
 	make -C docs html
 
 typecheck: ## check type hints with mypy
-	poetry run mypy --strict parsenvy/parsenvy.py # TODO
+	poetry run mypy --strict parsenvy/parsenvy.py
 
 test: ## run tests with pytest
 	poetry run pytest --cov=parsenvy -vv
