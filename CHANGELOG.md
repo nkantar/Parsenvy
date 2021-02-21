@@ -1,6 +1,32 @@
 # Parsenvy Changelog
 
 
+<!--
+headers:
+Added      - new features
+Changed    - changes in existing functionality
+Deprecated - soon-to-be removed features
+Removed    - now removed features
+Fixed      - any bug fixes
+Security   - in case of vulnerabilities
+-->
+
+
+## [Unreleased]
+
+### Added
+- CI with code quality checks
+- Contributing guidelines
+- Sphinx generated docs, both locally and on Read the Docs
+
+## Changed
+- Refactored everything to v3
+- Dev env management from Pipenv to Poetry
+
+### Removed
+- `dict()`
+
+
 ## [2.1.0] - 2019-05-03
 
 ### Deprecated
