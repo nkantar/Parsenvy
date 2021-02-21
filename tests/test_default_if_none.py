@@ -16,8 +16,7 @@ def test_default_if_none_arg(func, monkeypatch):
     monkeypatch.setenv("foo", "bar")
 
     decorated_func = parsenvy.default_if_none(func)
-    value = decorated_func("foo")
-    assert value == "bar"
+    assert decorated_func("foo") == "bar"
 
 
 def test_default_if_none_default(func, monkeypatch):
@@ -25,8 +24,7 @@ def test_default_if_none_default(func, monkeypatch):
     monkeypatch.delenv("foo", raising=False)
 
     decorated_func = parsenvy.default_if_none(func)
-    value = decorated_func("foo", "bar")
-    assert value == "bar"
+    assert decorated_func("foo", "bar") == "bar"
 
 
 def test_default_if_none_neither(func, monkeypatch):
@@ -34,5 +32,4 @@ def test_default_if_none_neither(func, monkeypatch):
     monkeypatch.delenv("foo", raising=False)
 
     decorated_func = parsenvy.default_if_none(func)
-    value = decorated_func("foo")
-    assert value is None
+    assert decorated_func("foo") is None
