@@ -28,7 +28,7 @@ sphinx-rtd-theme = "^0.5.1"
 [tool.poetry.extras]
 docs = [
   "sphinx",
-  "phinx-rtd-theme",
+  "sphinx-rtd-theme",
 ]
 
 [build-system]
