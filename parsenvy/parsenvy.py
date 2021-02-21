@@ -83,6 +83,17 @@ def int(
     env_var: builtins.str,
     default: Optional[builtins.int] = None,
 ) -> Optional[builtins.int]:
+    """
+    Parse environment variable value into a integer.
+
+    Args:
+        env_var (str): Name of desired environment variable.
+        default (int, optional): Optional fallback value.
+
+    Returns:
+        int (optional): Environment variable typecast into a boolean.
+
+    """
     try:
         return builtins.int(env_var)
     except ValueError:
