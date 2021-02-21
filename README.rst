@@ -9,10 +9,12 @@ Environment variables are strings by default. This can be *rather* inconvenient 
 Features
 --------
 
-- Compatible with Python 3.6+ only (the last Python 2 compatible version was `1.0.2 <https://github.com/nkantar/Parsenvy/releases/tag/1.0.2>`_)
-- Fully tested on `Linux <https://travis-ci.org/nkantar/Parsenvy>`_ and `Windows <https://ci.appveyor.com/project/nkantar/Parsenvy>`_
-- No dependencies aside from Python's core ``builtins``, ``os``, and ``typing`` modules
-- BSD (3-Clause) licensed
+- Compatible with Python 3.6+ only (the last Python 2 compatible version was `1.0.2 <https://github.com/nkantar/Parsenvy/releases/tag/1.0.2>`_).
+- Fully tested on Linux, macOS, and Windows.
+- No dependencies outside of the Python standard library.
+- BSD (3-Clause) licensed.
+- Utterly awesome.
+- Now with `docs <https://parsenvy.readthedocs.io>`_!
 
 
 Examples
