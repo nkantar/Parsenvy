@@ -14,7 +14,7 @@ doccheck: ## check code docs with pydocstyle
 	poetry run pydocstyle parsenvy/parsenvy.py
 
 docs: ## build docs site
-	make -C docs html
+	poetry run make -C docs html
 
 typecheck: ## check type hints with mypy
 	poetry run mypy --strict parsenvy/parsenvy.py
