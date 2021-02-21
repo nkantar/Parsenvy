@@ -198,6 +198,17 @@ def set(
     env_var: builtins.str,
     default: Optional[Set[Any]] = None,
 ) -> Optional[Set[Any]]:
+    """
+    Parse environment variable value into a set.
+
+    Args:
+        env_var (str): Name of desired environment variable.
+        default (set, optional): Optional fallback value.
+
+    Returns:
+        set (optional): Environment variable typecast into a set.
+
+    """
     if env_var is None or env_var == "":
         return default
 
