@@ -91,7 +91,7 @@ def int(
         default (int, optional): Optional fallback value.
 
     Returns:
-        int (optional): Environment variable typecast into a boolean.
+        int (optional): Environment variable typecast into a integer.
 
     """
     try:
@@ -144,6 +144,17 @@ def tuple(
     env_var: builtins.str,
     default: Optional[Tuple[Any, ...]] = None,
 ) -> Optional[Tuple[Any, ...]]:
+    """
+    Parse environment variable value into a tuple.
+
+    Args:
+        env_var (str): Name of desired environment variable.
+        default (tuple, optional): Optional fallback value.
+
+    Returns:
+        tuple (optional): Environment variable typecast into a tuple.
+
+    """
     if env_var == "":
         return default
 
