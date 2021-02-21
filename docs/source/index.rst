@@ -31,7 +31,6 @@ In python:
    :caption: Contents:
 
    bool
-   dict
    float
    int
    list
