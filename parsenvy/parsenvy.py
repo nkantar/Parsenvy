@@ -111,6 +111,16 @@ def list(
     env_var: builtins.str,
     default: Optional[List[Any]] = None,
 ) -> Optional[List[Any]]:
+    """
+    Parse environment variable value into a list.
+
+    Args:
+        env_var (str): Name of desired environment variable.
+        default (List, optional): Optional fallback value.
+
+    Returns:
+        List (optional): Environment variable typecast into a list.
+    """
     if env_var == "":
         return default
 
