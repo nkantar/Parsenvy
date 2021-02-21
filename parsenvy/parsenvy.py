@@ -1,117 +1,118 @@
 import builtins
+from functools import wraps
 import os
-from typing import Any, Iterable, List, Optional
+from typing import Any, Callable, List, Optional, Set, Tuple
 
 
-def _env_var(key: builtins.str) -> Optional[builtins.str]:
-    try:
-        return os.environ[key]
-    except KeyError:
-        return None
+TRUES = ["true", "1"]
+FALSES = ["false", "0"]
 
 
-def bool(arg: builtins.str, default: builtins.bool = None) -> Optional[builtins.bool]:
-    var: Optional[builtins.str] = _env_var(arg)
-    trues: List[builtins.str] = ["true", "1"]
-    falses: List[builtins.str] = ["false", "0"]
+def default_if_none(func: Callable[[builtins.str, Any], Any]) -> Optional[Any]:
+    @wraps(func)
+    def wrapper_default_if_none(*args: Any) -> Optional[Any]:
+        value = os.environ.get(args[0])
 
-    if var is not None:
-        if builtins.str(var).lower() in trues:
-            return True
-        elif builtins.str(var).lower() in falses:
-            return False
-        else:
-            raise TypeError
-    else:
-        return default
+        if value is None:
+            try:
+                return args[1]
+            except IndexError:
+                return None
 
-
-def int(arg: builtins.str, default: builtins.int = None) -> Optional[builtins.int]:
-    var: Optional[builtins.str] = _env_var(arg)
-
-    if var is not None:
         try:
-            return builtins.int(var)
-        except ValueError:
-            raise TypeError
-    else:
-        return default
-
-
-def float(
-    arg: builtins.str, default: builtins.float = None
-) -> Optional[builtins.float]:
-    var: Optional[builtins.str] = _env_var(arg)
-
-    if var is not None:
-        try:
-            return builtins.float(var)
-        except ValueError:
-            raise TypeError
-    else:
-        return default
-
-
-def list(arg: builtins.str, default: Iterable[Any] = None) -> Optional[builtins.list]:
-    var: Optional[builtins.str] = _env_var(arg)
-
-    if var is not None and var != "":
-        return var.split(",")
-    else:
-        if default is not None:
-            return builtins.list(default)
-        else:
-            return None
-
-
-def tuple(
-    arg: builtins.str, default: builtins.tuple = None
-) -> Optional[builtins.tuple]:
-    val_list: Optional[List[Any]] = list(arg, default=default)
-
-    if val_list is not None:
-        return builtins.tuple(val_list)
-    else:
-        return default
-
-
-def str(arg: builtins.str, default: builtins.str = None) -> Optional[builtins.str]:
-    var: Optional[builtins.str] = _env_var(arg)
-
-    if var is not None:
-        return var
-    else:
-        return default
-
-
-def set(arg: builtins.str, default: builtins.set = None) -> Optional[builtins.set]:
-    val_list: Optional[builtins.list] = list(arg, default=default)
-
-    if val_list is not None:
-        return builtins.set(val_list)
-    else:
-        return default
-
-
-def dict(arg: builtins.str, default: builtins.dict = None) -> Optional[builtins.dict]:
-    print("[WARNING] parsenvy.dict() will be deprecated in version 3.")
-
-    var: Optional[builtins.str] = _env_var(arg)
-
-    if var is not None:
-        try:
-            pair_list: builtins.list = var.split(",")
-            element_lists: builtins.list = [pair.split(":") for pair in pair_list]
-            all_elements: builtins.list = []
-            for pair in element_lists:
-                all_elements.extend(pair)
-            final_dict: builtins.dict = {}
-            for index, key in enumerate(all_elements):
-                if index % 2 == 0:
-                    final_dict.update({key: all_elements[index + 1]})
+            default = args[1]
         except IndexError:
-            raise TypeError
+            default = None
 
-        return final_dict
-    else:
+        return func(value, default)
+
+    return wrapper_default_if_none
+
+
+@default_if_none
+def bool(
+    value: builtins.str,
+    default: Optional[builtins.bool] = None,
+) -> Optional[builtins.bool]:
+    if value.lower() in TRUES:
+        return True
+
+    if value.lower() in FALSES:
+        return False
+
+    raise ValueError(
+        f"Invalid boolean value specified: {value} "
+        "Parsenvy accepts 'true', '1', 'false', and '0' as boolean values."
+    )
+
+
+@default_if_none
+def int(
+    value: builtins.str,
+    default: Optional[builtins.int] = None,
+) -> Optional[builtins.int]:
+    try:
+        return builtins.int(value)
+    except ValueError:
+        raise TypeError(
+            f"Invalid integer value specified: {value} "
+            "Parsenvy accepts only valid integers as integer values."
+        )
+
+
+@default_if_none
+def float(
+    value: builtins.str,
+    default: Optional[builtins.float] = None,
+) -> Optional[builtins.float]:
+    try:
+        return builtins.float(value)
+    except ValueError:
+        raise TypeError(
+            f"Invalid float value specified: {float} "
+            "Parsenvy accepts only valid floats and integers as float values"
+        )
+
+
+@default_if_none
+def list(
+    value: builtins.str,
+    default: Optional[List[Any]] = None,
+) -> Optional[List[Any]]:
+    if value == "":
         return default
+
+    return value.split(",")
+
+
+@default_if_none
+def tuple(
+    value: builtins.str,
+    default: Optional[Tuple[Any, ...]] = None,
+) -> Optional[Tuple[Any, ...]]:
+    if value == "":
+        return default
+
+    return builtins.tuple(value.split(","))
+
+
+@default_if_none
+def str(
+    value: builtins.str,
+    default: Optional[builtins.str] = None,
+) -> Optional[builtins.str]:
+    if value == "":
+        return default
+
+    return value
+
+
+@default_if_none
+def set(
+    value: builtins.str,
+    default: Optional[Set[Any]] = None,
+) -> Optional[Set[Any]]:
+    if value is None or value == "":
+        return default
+
+    return builtins.set(value.split(","))

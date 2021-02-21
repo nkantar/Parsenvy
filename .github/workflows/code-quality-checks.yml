@@ -46,8 +46,8 @@ jobs:
       - name: Check doc site build
         run: make docs
 
-      # - name: Check type annotations
-      #   run: make typecheck # TODO
+      - name: Check type annotations
+        run: make typecheck
 
       - name: Run tests
         run: make test

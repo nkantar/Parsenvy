@@ -17,13 +17,13 @@ docs: ## build docs site
 	make -C docs html
 
 typecheck: ## check type hints with mypy
-	poetry run mypy --strict parsenvy/parsenvy.py # TODO
+	poetry run mypy --strict parsenvy/parsenvy.py
 
 test: ## run tests with pytest
-	poetry run pytest --cov=parsenvy -vv
+	poetry run pytest --cov -vv
 
 test-watch: ## watch tests with pytest-watch
-	poetry run pytest-watch -- --cov=parsenvy -vv
+	poetry run pytest-watch -- --cov -vv
 
 covcheck: ## check code coverage level
 	poetry run coverage report --fail-under=100
