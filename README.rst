@@ -50,4 +50,4 @@ Install
 Contributing
 ------------
 
-Contributions are welcome, and more information is available in the `contributing guide <contributing.html>`_.
+Contributions are welcome, and more information is available in the `contributing guide <https://parsenvy.readthedocs.io/en/latest/contributing.html>`_.
