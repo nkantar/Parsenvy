@@ -13,9 +13,9 @@ jobs:
     strategy:
       fail-fast: true
 
-    steps:
+    if: contains(github.ref, 'refs/tags/')
 
-      if: contains(github.ref, 'refs/tags/'):
+    steps:
 
         - name: Checkout repository
           uses: actions/checkout@v2
