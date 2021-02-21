@@ -10,25 +10,25 @@ FALSES = ["false", "0"]
 
 def default_if_none(func: Callable[[builtins.str, Any], Any]) -> Optional[Any]:
     @wraps(func)
-    def wrapper_default_if_none(*args: Any, **kwargs: Any) -> Optional[Any]:
-        if os.environ.get(args[0]) is None:
+    def wrapper_default_if_none(*args: Any) -> Optional[Any]:
+        value = os.environ.get(args[0])
+
+        if value is None:
             try:
                 return args[1]
             except IndexError:
                 return None
 
-        return func(*args, **kwargs)
+        return func(value, *args)
 
     return wrapper_default_if_none
 
 
 @default_if_none
 def bool(
-    arg: builtins.str,
+    value: builtins.str,
     default: Optional[builtins.bool] = None,
 ) -> Optional[builtins.bool]:
-    value = os.environ.get(arg)
-
     if value.lower() in TRUES:
         return True
 
@@ -36,50 +36,44 @@ def bool(
         return False
 
     raise ValueError(
-        f"Invalid boolean value specified: {value}\n"
+        f"Invalid boolean value specified: {value} "
         "Parsenvy accepts 'true', '1', 'false', and '0' as boolean values."
     )
 
 
 @default_if_none
 def int(
-    arg: builtins.str,
+    value: builtins.str,
     default: Optional[builtins.int] = None,
 ) -> Optional[builtins.int]:
-    value = os.environ.get(arg)
-
     try:
         return builtins.int(value)
     except ValueError:
         raise TypeError(
-            f"Invalid integer value specified: {value}\n"
+            f"Invalid integer value specified: {value} "
             "Parsenvy accepts only valid integers as integer values."
         )
 
 
 @default_if_none
 def float(
-    arg: builtins.str,
+    value: builtins.str,
     default: Optional[builtins.float] = None,
 ) -> Optional[builtins.float]:
-    value = os.environ.get(arg)
-
     try:
         return builtins.float(value)
     except ValueError:
         raise TypeError(
-            f"Invalid float value specified: {float}\n"
+            f"Invalid float value specified: {float} "
             "Parsenvy accepts only valid floats and integers as float values"
         )
 
 
 @default_if_none
 def list(
-    arg: builtins.str,
+    value: builtins.str,
     default: Optional[List[Any]] = None,
 ) -> Optional[List[Any]]:
-    value = os.environ.get(arg)
-
     if value == "":
         return default
 
@@ -88,11 +82,9 @@ def list(
 
 @default_if_none
 def tuple(
-    arg: builtins.str,
+    value: builtins.str,
     default: Optional[Tuple[Any, ...]] = None,
 ) -> Optional[Tuple[Any, ...]]:
-    value = os.environ.get(arg)
-
     if value == "":
         return default
 
@@ -101,11 +93,9 @@ def tuple(
 
 @default_if_none
 def str(
-    arg: builtins.str,
+    value: builtins.str,
     default: Optional[builtins.str] = None,
 ) -> Optional[builtins.str]:
-    value = os.environ.get(arg)
-
     if value == "":
         return default
 
@@ -114,11 +104,9 @@ def str(
 
 @default_if_none
 def set(
-    arg: builtins.str,
+    value: builtins.str,
     default: Optional[Set[Any]] = None,
 ) -> Optional[Set[Any]]:
-    value = os.environ.get(arg)
-
     if value is None or value == "":
         return default
 
