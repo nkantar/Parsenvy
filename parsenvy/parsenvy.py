@@ -108,6 +108,17 @@ def float(
     env_var: builtins.str,
     default: Optional[builtins.float] = None,
 ) -> Optional[builtins.float]:
+    """
+    Parse environment variable value into a float.
+
+    Args:
+        env_var (float): Name of desired environment variable.
+        default (float, optional): Optional fallback value.
+
+    Returns:
+        float (optional): Environment variable typecast into a float.
+
+    """
     try:
         return builtins.float(env_var)
     except ValueError:
@@ -122,6 +133,16 @@ def list(
     env_var: builtins.str,
     default: Optional[List[Any]] = None,
 ) -> Optional[List[Any]]:
+    """
+    Parse environment variable value into a list.
+
+    Args:
+        env_var (str): Name of desired environment variable.
+        default (List, optional): Optional fallback value.
+
+    Returns:
+        List (optional): Environment variable typecast into a list.
+    """
     if env_var == "":
         return default
 

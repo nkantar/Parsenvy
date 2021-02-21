@@ -3,7 +3,12 @@ Parsenvy: Enviously Elegant Environment Variable Parsing
 
 **Parsenvy** is an *enviously* elegant environment variable parsing Python library.
 
-Environment variables are strings by default. This can be *rather* inconvenient if you're dealing with a number of them, and in a variety of desired types. Parsenvy aims to provide an intuitive, explicit interface for retrieving these values in appropriate types with *human-friendly* syntax. Hello
+.. image:: https://github.com/nkantar/Parsenvy/actions/workflows/code-quality-checks.yml/badge.svg?branch=main
+        :target: https://github.com/nkantar/Parsenvy/actions/workflows/code-quality-checks.yml
+        :alt: Github Actions
+
+
+Environment variables are strings by default. This can be *rather* inconvenient if you're dealing with a number of them, and in a variety of desired types. Parsenvy aims to provide an intuitive, explicit interface for retrieving these values in appropriate types with *human-friendly* syntax.
 
 
 Features
@@ -50,4 +55,4 @@ Install
 Contributing
 ------------
 
-Contributions are welcome, and more information is available in the `contributing guide <CONTRIBUTING.md>`_.
+Contributions are welcome, and more information is available in the `contributing guide <https://parsenvy.readthedocs.io/en/latest/contributing.html>`_.
