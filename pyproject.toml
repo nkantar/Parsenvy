@@ -30,6 +30,7 @@ python_paths = "parsenvy"
 
 [tool.coverage.run]
 branch = true
+source = ["parsenvy"]
 
 [tool.coverage.report]
 show_missing = true
