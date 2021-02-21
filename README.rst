@@ -50,4 +50,4 @@ Install
 Contributing
 ------------
 
-Contributions are welcome, and more information is available in the `contributing guide <CONTRIBUTING.md>`_.
+Contributions are welcome, and more information is available in the `contributing guide <contributing.html>`_.
