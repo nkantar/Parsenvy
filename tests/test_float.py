@@ -4,49 +4,42 @@ import parsenvy
 
 
 def test_float_positive_integer(monkeypatch):
-    """'13'"""
     monkeypatch.setenv("foo", str(float(13)))
 
     assert parsenvy.float("foo") == float(13)
 
 
 def test_float_positive_decimal(monkeypatch):
-    """'13.42'"""
     monkeypatch.setenv("foo", str(float(13.42)))
 
     assert parsenvy.float("foo") == float(13.42)
 
 
 def test_float_negative_integer(monkeypatch):
-    """'-13'"""
     monkeypatch.setenv("foo", str(float(-13)))
 
     assert parsenvy.float("foo") == float(-13)
 
 
 def test_float_negative_decimal(monkeypatch):
-    """'-13.42'"""
     monkeypatch.setenv("foo", str(float(-13.42)))
 
     assert parsenvy.float("foo") == float(-13.42)
 
 
 def test_float_zero(monkeypatch):
-    """'0'"""
     monkeypatch.setenv("foo", str(float(0)))
 
     assert parsenvy.float("foo") == float(0)
 
 
 def test_float_negative_zero(monkeypatch):
-    """'-0'"""
     monkeypatch.setenv("foo", str(float(-0)))
 
     assert parsenvy.float("foo") == float(-0)
 
 
 def test_float_invalid(monkeypatch):
-    """'bar'"""
     monkeypatch.setenv("foo", "bar")
 
     with pytest.raises(TypeError):
@@ -54,7 +47,6 @@ def test_float_invalid(monkeypatch):
 
 
 def test_float_empty(monkeypatch):
-    """''"""
     monkeypatch.setenv("foo", "")
 
     with pytest.raises(TypeError):
