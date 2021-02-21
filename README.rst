@@ -16,6 +16,10 @@ Parsenvy: Enviously Elegant Environment Variable Parsing
         :target: https://parsenvy.readthedocs.io/en/latest
         :alt: main Documentation Status
 
+.. image:: https://img.shields.io/github/license/nkantar/Parsenvy
+        :target: https://github.com/nkantar/Parsenvy/blob/main/LICENSE
+        :alt: License: BSD-3-Clause
+
 Environment variables are strings by default. This can be *rather* inconvenient if you're dealing with a number of them, and in a variety of desired types. Parsenvy aims to provide an intuitive, explicit interface for retrieving these values in appropriate types with *human-friendly* syntax.
 
 
