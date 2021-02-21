@@ -40,8 +40,8 @@ jobs:
       - name: Check for linter errors
         run: make lint
 
-      # - name: Check docstring formatting
-      #   run: make doccheck # TODO
+      - name: Check docstring formatting
+        run: make doccheck 
 
       - name: Check doc site build
         run: make docs
