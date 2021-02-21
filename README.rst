@@ -5,13 +5,6 @@ Parsenvy: Enviously Elegant Environment Variable Parsing
 
 Environment variables are strings by default. This can be *rather* inconvenient if you're dealing with a number of them, and in a variety of desired types. Parsenvy aims to provide an intuitive, explicit interface for retrieving these values in appropriate types with *human-friendly* syntax.
 
-.. image:: https://travis-ci.org/nkantar/Parsenvy.svg?branch=master
-    :target: https://travis-ci.org/nkantar/Parsenvy
-.. image:: https://ci.appveyor.com/api/projects/status/ypywtakntwsf6l00/branch/master?svg=true
-    :target: https://ci.appveyor.com/project/nkantar/Parsenvy
-.. image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg 
-   :target: https://saythanks.io/to/nkantar
-
 
 Features
 --------
@@ -59,6 +52,4 @@ Install
 Contributing
 ------------
 
-Contributions of all sorts are welcome, be they bug reports, patches, or even just feedback. Creating a `new issue <https://github.com/nkantar/Parsenvy/issues/new>`_ or `pull request <https://github.com/nkantar/Parsenvy/compare>`_ is probably the best way to get started.
-
-Please note that this project is released with a `Contributor Code of Conduct <https://github.com/nkantar/Parsenvy/blob/master/CODE_OF_CONDUCT.md>`_. By participating in this project you agree to abide by its terms.
+Contributions are welcome, and more information is available in the `contributing guide <CONTRIBUTING.md>`_.
