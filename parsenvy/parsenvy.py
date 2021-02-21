@@ -19,7 +19,7 @@ def default_if_none(func: Callable[[builtins.str, Any], Any]) -> Optional[Any]:
             except IndexError:
                 return None
 
-        return func(value, *args)
+        return func(value, *args[1:])
 
     return wrapper_default_if_none
 
