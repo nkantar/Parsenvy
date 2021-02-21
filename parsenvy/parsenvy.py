@@ -9,16 +9,29 @@ FALSES = ["false", "0"]
 
 
 def default_if_none(func: Callable[[builtins.str, Any], Any]) -> Optional[Any]:
+    """
+    Decorate function to return default if desired env var isn't defined.
+
+    Args:
+        func (callable): Function to return if desired env var is defined.
+
+    Returns:
+        callable (optional): Decorated function.
+
+    """
+
     @wraps(func)
     def wrapper_default_if_none(*args: Any) -> Optional[Any]:
         value = os.environ.get(args[0])
 
+        # if env var isn't defined, try returning default, or fall back to None
         if value is None:
             try:
                 return args[1]
             except IndexError:
                 return None
 
+        # grab default if present to pass to function
         try:
             default = args[1]
         except IndexError:
