@@ -52,5 +52,5 @@ jobs:
       - name: Run tests
         run: make test
 
-      - name: Check code coverage
-        run: make covcheck
+      # - name: Check code coverage
+      #   run: make covcheck # TODO
