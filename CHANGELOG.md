@@ -14,6 +14,9 @@ Security   - in case of vulnerabilities
 
 ## [Unreleased]
 
+### Fixed
+- PyPI badge in README
+
 
 ## [3.0.0] - 2021-02-21
 
