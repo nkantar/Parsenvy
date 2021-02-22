@@ -173,7 +173,7 @@ Security   - in case of vulnerabilities
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/3.3.0...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/3.0.0...HEAD
 [3.0.0]: https://github.com/nkantar/Parsenvy/compare/2.1.0...3.0.0
 [2.1.0]: https://github.com/nkantar/Parsenvy/compare/2.0.10...2.1.0
 [2.0.10]: https://github.com/nkantar/Parsenvy/compare/2.0.9...2.0.10
