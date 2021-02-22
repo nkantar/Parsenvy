@@ -48,8 +48,13 @@ jobs:
         #########################
         # PyPI
 
-        # - name: Publish to PyPI
-        #   run: poetry publish
+        - name: Publish to production PyPI
+          env:
+            PRODUCTION_PYPI_TOKEN: ${{ secrets.PARSENVY_PRODUCTION_PYPI }}
+          run: poetry publish -u __token__ -p "$PRODUCTION_PYPI_TOKEN"
+
+        - name: Wait a few seconds to avoid race conditions
+          run: sleep 5
           
-        # - name: Validate build
-        #   run: sh in/cicd_validate_production_build.sh
+        - name: Validate build
+          run: sh bin/cd_validate_build.sh production $(potery version -s)
