@@ -40,7 +40,7 @@ jobs:
           run: poetry publish --build -r testpypi -u __token__ -p "$TEST_PYPI_TOKEN"
 
         - name: Validate test build
-          run: sh bin/cicd_validate_build.sh test $(poetry version -s)
+          run: sh bin/cd_validate_build.sh test $(poetry version -s)
 
         #########################
         # PyPI
