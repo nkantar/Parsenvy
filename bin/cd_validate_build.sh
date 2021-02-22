@@ -3,19 +3,13 @@
 set -x
 set -e
 
-STAGE=$1
-VERSION=$2
-INDEX_URL=""
+VERSION=$(poetry version -s)
 
-if [ "$STAGE" = "test" ]; then 
-    INDEX_URL="--index-url https://test.pypi.org/simple/"
-fi;
-
-mkdir "validate_$STAGE"
-cd "validate_$STAGE"
-python -m venv "venv_$STAGE"
-. "venv_$STAGE/bin/activate"
-pip install $INDEX_URL parsenvy=="$VERSION"
+mkdir "validate_build"
+cd "validate_build"
+python -m venv "venv"
+. "venv/bin/activate"
+pip install "../dist/Parsenvy-$VERSION-py3-none-any.whl"
 TEST_INT=42 python -c "import parsenvy; assert parsenvy.int('TEST_INT') == 42"
 deactivate
 cd ..
