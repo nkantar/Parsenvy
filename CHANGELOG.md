@@ -14,14 +14,22 @@ Security   - in case of vulnerabilities
 
 ## [Unreleased]
 
+
+## [3.0.0] - 2021-02-21
+
 ### Added
 - CI with code quality checks
+- CD with automatic publishing to PyPI
 - Contributing guidelines
 - Sphinx generated docs, both locally and on Read the Docs
+- Docs for _all_ the things!
+- Tests for _all_ the things!
+- _**SOME CONTRIBUTORS!!! :D**_
 
 ## Changed
 - Refactored everything to v3
 - Dev env management from Pipenv to Poetry
+- Some docs from MD to rST
 
 ### Removed
 - `dict()`
@@ -162,7 +170,8 @@ Security   - in case of vulnerabilities
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/2.1.0...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/3.3.0...HEAD
+[3.0.0]: https://github.com/nkantar/Parsenvy/compare/2.1.0...3.0.0
 [2.1.0]: https://github.com/nkantar/Parsenvy/compare/2.0.10...2.1.0
 [2.0.10]: https://github.com/nkantar/Parsenvy/compare/2.0.9...2.0.10
 [2.0.9]: https://github.com/nkantar/Parsenvy/compare/2.0.8...2.0.9
