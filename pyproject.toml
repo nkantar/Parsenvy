@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "Parsenvy"
-version = "3.0.0rc7"
+version = "3.0.0rc8"
 description = "Enviously elegant environment variable parsing"
 authors = ["Nik Kantar <nik@nkantar.com>"]
 license = "BSD-3-Clause"
