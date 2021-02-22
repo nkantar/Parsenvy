@@ -12,8 +12,8 @@ Parsenvy: Enviously Elegant Environment Variable Parsing
         :target: https://github.com/nkantar/Parsenvy/actions/workflows/code-quality-checks.yml
         :alt: Github Actions
 
-.. image:: https://badge.fury.io/py/Parsenvy.svg
-        :target: https://badge.fury.io/py/Parsenvy
+.. image:: https://badge.fury.io/py/parsenvy.svg
+        :target: https://badge.fury.io/py/parsenvy
         :alt: badgefury svg
 
 .. image:: https://img.shields.io/github/commits-since/nkantar/Parsenvy/3.0.0
