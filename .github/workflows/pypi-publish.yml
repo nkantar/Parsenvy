@@ -40,7 +40,7 @@ jobs:
           run: poetry publish --build -r testpypi -u __token__ -p "$TEST_PYPI_TOKEN"
 
         - name: Wait a few seconds to avoid race conditions
-          run: sleep 5
+          run: sleep 10
 
         - name: Validate test build
           run: sh bin/cd_validate_build.sh test $(poetry version -s)
@@ -54,7 +54,7 @@ jobs:
           run: poetry publish -u __token__ -p "$PRODUCTION_PYPI_TOKEN"
 
         - name: Wait a few seconds to avoid race conditions
-          run: sleep 5
+          run: sleep 10
           
         - name: Validate build
           run: sh bin/cd_validate_build.sh production $(potery version -s)
