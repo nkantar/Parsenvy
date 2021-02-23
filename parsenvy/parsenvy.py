@@ -172,28 +172,6 @@ def tuple(
 
 
 @default_if_none
-def str(
-    env_var: builtins.str,
-    default: Optional[builtins.str] = None,
-) -> Optional[builtins.str]:
-    """
-    Parse environment variable value into a str.
-
-    Args:
-        env_var (str): Name of desired environment variable.
-        default (str, optional): Optional fallback value.
-
-    Returns:
-        str (optional): Environment variable typecast into a str.
-
-    """
-    if env_var == "":
-        return default
-
-    return env_var
-
-
-@default_if_none
 def set(
     env_var: builtins.str,
     default: Optional[Set[Any]] = None,
@@ -213,3 +191,25 @@ def set(
         return default
 
     return builtins.set(env_var.split(","))
+
+
+@default_if_none
+def str(
+    env_var: builtins.str,
+    default: Optional[builtins.str] = None,
+) -> Optional[builtins.str]:
+    """
+    Parse environment variable value into a str.
+
+    Args:
+        env_var (str): Name of desired environment variable.
+        default (str, optional): Optional fallback value.
+
+    Returns:
+        str (optional): Environment variable typecast into a str.
+
+    """
+    if env_var == "":
+        return default
+
+    return env_var
