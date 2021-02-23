@@ -37,9 +37,19 @@ coverage = "^5.4"
 pytest-cov = "^2.11.1"
 pytest-pythonpath = "^0.7.3"
 pdbpp = "^0.10.2"
+
+# docs
+# note: please also add to [tool.poetry.extras] as appropriate
 sphinx = "^3.5.1"
 sphinx-rtd-theme = "^0.5.1"
 m2r2 = "^0.2.7"
+
+[tool.poetry.extras]
+docs = [
+  "sphinx",
+  "sphinx-rtd-theme",
+  "m2r2",
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
