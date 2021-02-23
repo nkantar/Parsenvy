@@ -50,3 +50,6 @@ jobs:
 
       - name: Check code coverage
         run: make covcheck
+
+      - name: Check build
+        run: poetry build
