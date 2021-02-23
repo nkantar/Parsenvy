@@ -37,7 +37,7 @@ Security   - in case of vulnerabilities
 - Tests for _all_ the things!
 - _**SOME CONTRIBUTORS!!! :D**_
 
-## Changed
+### Changed
 - Refactored everything to v3
 - Dev env management from Pipenv to Poetry
 - Some docs from MD to rST
