@@ -16,7 +16,7 @@ Parsenvy: Enviously Elegant Environment Variable Parsing
         :target: https://badge.fury.io/py/parsenvy
         :alt: badgefury svg
 
-.. image:: https://img.shields.io/github/commits-since/nkantar/Parsenvy/3.0.0
+.. image:: https://img.shields.io/github/commits-since/nkantar/Parsenvy/3.0.1
         :target: https://github.com/nkantar/Parsenvy/blob/main/CHANGELOG.md#unreleased
         :alt: Unreleased chages
 
