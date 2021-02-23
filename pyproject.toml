@@ -23,6 +23,24 @@ classifiers = [
   "Typing :: Typed",
 ]
 
+include = [
+  "CHANGELOG.md",
+  "CODE_OF_CONDUCT.rst",
+  "CONTRIBUTING.rst",
+  "LICENSE",
+  "Makefile",
+  "README.rst",
+  "bin/*.sh",
+  "docs/Makefile",
+  "docs/make.bat",
+  "docs/source/*.rst",
+  "docs/source/conf.py",
+  "parsenvy/*.py",
+  "poetry.lock",
+  "pyproject.toml",
+  "tests/test_*.py",
+]
+
 [tool.poetry.dependencies]
 python = "^3.6"
 
