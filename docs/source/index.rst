@@ -13,12 +13,12 @@ Home
    self
 
    bool
-   float
    int
+   float
    list
+   tuple
    set
    str
-   tuple
 
    default_if_none
    contributing
