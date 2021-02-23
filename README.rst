@@ -44,20 +44,27 @@ Examples
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.bool('BOOL_ENV_VAR')  # BOOL_ENV_VAR=True
+
+    >>> parsenvy.bool('DEBUG_ENABLED')  # DEBUG_ENABLED=True
     True
-    >>> parsenvy.int('INT_ENV_VAR')  # INT_ENV_VAR=13
+
+    >>> parsenvy.int('POSTS_PER_PAGE')  # POSTS_PER_PAGE=13
     13
-    >>> parsenvy.float('FLOAT_ENV_VAR')  # FLOAT_ENV_VAR=555.55
-    555.55
-    >>> parsenvy.list('LIST_ENV_VAR')  # LIST_ENV_VAR=shiver,me,timbers
-    ['shiver', 'me', 'timbers']
-    >>> parsenvy.tuple('TUPLE_ENV_VAR')  # TUPLE_ENV_VAR=hello,world
-    ('hello', 'world')
-    >>> parsenvy.str('STR_ENV_VAR')  # STR_ENV_VAR=meep
-    'meep'
-    >>> parsenvy.set('SET_ENV_VAR')  # SET_ENV_VAR=wat,wut,wot
-    set(['wat', 'wut', 'wot'])
+
+    >>> parsenvy.float('EXCHANGE_RATE')  # EXCHANGE_RATE=42.911
+    42.911
+
+    >>> parsenvy.list('INVALID_USERNAMES')  # INVALID_USERNAMES=admin,superuser,user,webmaster
+    ['admin', 'superuser', 'user', 'webmaster']
+
+    >>> parsenvy.tuple('SAMPLE_GREETING')  # SAMPLE_GREETING=Hello,world!
+    ('Hello', 'world!')
+
+    >>> parsenvy.set('ALLOWED_CATEGORIES')  # ALLOWED_CATEGORIES=python,vim,git
+    {'python', 'vim', 'git'}
+
+    >>> parsenvy.str('DB_PREFIX')  # DB_PREFIX=dj_
+    'dj_'
 
 
 Install
