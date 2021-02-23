@@ -21,8 +21,11 @@ Home
    str
 
    default_if_none
+
    contributing
    conduct
+
+   changelog
 
    Source on GitHub <https://github.com/nkantar/Parsenvy>
    Package on PyPI <https://pypi.org/project/parsenvy/>

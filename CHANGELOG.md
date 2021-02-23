@@ -20,7 +20,7 @@ Security   - in case of vulnerabilities
     - Added repo and package external links to the sidebar
     - Updated examples in the README
     - Updated examples in the docs
-    - Added Contributing Guidelines and Code of Conduct
+    - Added Contributing Guidelines, Code of Conduct, and Changelog pages and sidebar links
 
 ### Fixed
 - PyPI badge in README
