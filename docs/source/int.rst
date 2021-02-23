@@ -10,10 +10,10 @@ Usage
 
 .. code-block:: shell
 
-    export INT_ENV_VAR=13
+    export POSTS_PER_PAGE=13
 
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.bool('INT_ENV_VAR')
+    >>> parsenvy.bool('POSTS_PER_PAGE')
     13

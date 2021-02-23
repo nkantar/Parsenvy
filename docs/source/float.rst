@@ -11,10 +11,10 @@ Usage
 
 .. code-block:: shell
 
-    export FLOAT_ENV_VAR=1.2
+    export EXCHANGE_RATE=42.911
 
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.float('FLOAT_ENV_VAR')
-    1.2
+    >>> parsenvy.float('EXCHANGE_RATE')
+    42.911

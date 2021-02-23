@@ -10,10 +10,10 @@ Usage
 
 .. code-block:: shell
 
-    export LIST_ENV_VAR=1,2,3
+    export INVALID_USERNAMES=admin,superuser,user,webmaster
 
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.list('LIST_ENV_VAR')
-    (1,2,3)
+    >>> parsenvy.list('INVALID_USERNAMES')
+    ['admin', 'superuser', 'user', 'webmaster']

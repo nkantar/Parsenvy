@@ -10,10 +10,10 @@ Usage
 
 .. code-block:: shell
 
-    export TUPLE_ENV_VAR=1,2,3
+    export ALLOWED_CATEGORIES=python,vim,git
 
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.tuple('TUPLE_ENV_VAR')
-    (1,2,3)
+    >>> parsenvy.tuple('ALLOWED_CATEGORIES')
+    ('Hello', 'world!')
