@@ -14,6 +14,9 @@ Security   - in case of vulnerabilities
 
 ## [Unreleased]
 
+### Added
+- All relevant files to the built wheel
+
 ### Changed
 - Made `parsenvy` module exports "explicit"
 - Updated docs:
