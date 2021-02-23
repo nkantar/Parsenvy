@@ -9,8 +9,12 @@ String
 Usage
 -----
 
+.. code-block:: shell
+
+    export DB_PREFIX=dj_
+
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.str('STR_ENV_VAR')
-    "hello, world"
+    >>> parsenvy.str('DB_PREFIX')
+    'dj_'

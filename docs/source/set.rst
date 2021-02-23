@@ -8,8 +8,12 @@ Set
 Usage
 -----
 
+.. code-block:: shell
+
+    export ALLOWED_CATEGORIES=python,vim,git
+
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.set('SET_ENV_VAR')
-    (["hello", "world"])
+    >>> parsenvy.set('ALLOWED_CATEGORIES')
+    {'python', 'vim', 'git'}

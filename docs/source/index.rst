@@ -13,12 +13,19 @@ Home
    self
 
    bool
-   float
    int
+   float
    list
+   tuple
    set
    str
-   tuple
 
    default_if_none
+
    contributing
+   conduct
+
+   changelog
+
+   Source on GitHub <https://github.com/nkantar/Parsenvy>
+   Package on PyPI <https://pypi.org/project/parsenvy/>

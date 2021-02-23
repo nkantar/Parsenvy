@@ -16,6 +16,11 @@ Security   - in case of vulnerabilities
 
 ### Changed
 - Made `parsenvy` module exports "explicit"
+- Updated docs:
+    - Added repo and package external links to the sidebar
+    - Updated examples in the README
+    - Updated examples in the docs
+    - Added Contributing Guidelines, Code of Conduct, and Changelog pages and sidebar links
 
 ### Fixed
 - PyPI badge in README
@@ -32,7 +37,7 @@ Security   - in case of vulnerabilities
 - Tests for _all_ the things!
 - _**SOME CONTRIBUTORS!!! :D**_
 
-## Changed
+### Changed
 - Refactored everything to v3
 - Dev env management from Pipenv to Poetry
 - Some docs from MD to rST

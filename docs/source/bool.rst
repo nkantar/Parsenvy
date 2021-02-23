@@ -11,10 +11,10 @@ Usage
 
 .. code-block:: shell
 
-    export BOOL_ENV_VAR=true
+    export DEBUG_ENABLED=True
 
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.bool('BOOL_ENV_VAR')
+    >>> parsenvy.bool('DEBUG_ENABLED')
     True

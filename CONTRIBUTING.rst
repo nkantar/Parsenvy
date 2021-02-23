@@ -7,7 +7,7 @@ Hi! First of all, thank you for contributing. :heart:
 All of the usual sorts of contributions are welcome: bug reports, patches, and feedback.
 Feel free to `browse existing issues <https://github.com/nkantar/Parsenvy/issues>`_ or `create a new one <https://github.com/nkantar/Parsenvy/issues/new>`_.
 
-Participation in this project in any way requires complying with the `Code of Conduct <CODE_OF_CONDUCT.md>`_.
+Participation in this project in any way requires complying with the `Code of Conduct <https://parsenvy.readthedocs.io/en/latest/conduct.html>`_.
 
 
 Got a problem?
