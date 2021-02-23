@@ -14,6 +14,9 @@ Security   - in case of vulnerabilities
 
 ## [Unreleased]
 
+### Changed
+- Made `parsenvy` module exports "explicit"
+
 ### Fixed
 - PyPI badge in README
 
