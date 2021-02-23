@@ -16,6 +16,11 @@ Security   - in case of vulnerabilities
 
 ### Changed
 - Made `parsenvy` module exports "explicit"
+- Updated docs:
+    - Added repo and package external links to the sidebar
+    - Updated examples in the README
+    - Updated examples in the docs
+    - Added Contributing Guidelines and Code of Conduct
 
 ### Fixed
 - PyPI badge in README
