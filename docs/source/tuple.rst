@@ -10,10 +10,10 @@ Usage
 
 .. code-block:: shell
 
-    export ALLOWED_CATEGORIES=python,vim,git
+    export SAMPLE_GREETING=Hello,world!
 
 .. code-block:: python
 
     >>> import parsenvy
-    >>> parsenvy.tuple('ALLOWED_CATEGORIES')
+    >>> parsenvy.tuple('SAMPLE_GREETING')
     ('Hello', 'world!')
