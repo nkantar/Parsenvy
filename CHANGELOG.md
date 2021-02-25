@@ -14,6 +14,9 @@ Security   - in case of vulnerabilities
 
 ## [Unreleased]
 
+### Fixed
+- Mismatch between env value and resulting tuple in docs (issue #63, PR #64).
+
 
 ## [3.0.2] - 2021-02-22
 
