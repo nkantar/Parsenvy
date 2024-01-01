@@ -14,10 +14,11 @@ classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
   "License :: OSI Approved :: BSD License",
-  "Programming Language :: Python :: 3.6",
-  "Programming Language :: Python :: 3.7",
   "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
   "Topic :: Software Development :: Libraries :: Python Modules",
   "Topic :: Utilities",
   "Typing :: Typed",
@@ -42,32 +43,31 @@ include = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.6"
+python = "^3.9" # TODO not ideal, supporting 3.8 would be good
 
 # Docs
-sphinx = {version = "^3.5.1", optional = true}
-sphinx-rtd-theme = {version = "^0.5.1", optional = true}
-m2r2 = {version = "^0.2.7", optional = true}
+sphinx = {version = "^7.2.6", optional = true}
+sphinx-rtd-theme = {version = "^2.0.0", optional = true}
+m2r2 = {version = "^0.3.3.post2", optional = true}
 
 [tool.poetry.dev-dependencies]
-mypy = "^0.812"
-black = "^20.8b1"
-flake8 = "^3.8.4"
-pydocstyle = "^5.1.1"
-pytest = "^6.2.2"
+mypy = "^1.8.0"
+black = "^23.12.1"
+flake8 = "^6.1.0"
+pydocstyle = "^6.3.0"
+pytest = "^7.4.4"
 pytest-watch = "^4.2.0"
-coverage = "^5.4"
-pytest-cov = "^2.11.1"
-pytest-pythonpath = "^0.7.3"
-pdbpp = "^0.10.2"
+coverage = "^7.4.0"
+pytest-cov = "^4.1.0"
+pdbpp = "^0.10.3"
 
 # Docs
 # NOTE: Please also add to:
 #   - [tool.poetry.dependencies] above as optional
 #   - [tool.poetry.extras] below
-sphinx = "^3.5.1"
-sphinx-rtd-theme = "^0.5.1"
-m2r2 = "^0.2.7"
+sphinx = "^7.2.6"
+sphinx-rtd-theme = "^2.0.0"
+m2r2 = "^0.3.3.post2"
 
 [tool.poetry.extras]
 docs = [
