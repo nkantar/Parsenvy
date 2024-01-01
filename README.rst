@@ -30,7 +30,7 @@ Environment variables are strings by default. This can be *rather* inconvenient 
 Features
 --------
 
-- Compatible with Python 3.6+ only (the last Python 2 compatible version was `1.0.2 <https://github.com/nkantar/Parsenvy/releases/tag/1.0.2>`_).
+- Compatible with Python 3.8+ only (the last Python 2 compatible version was `1.0.2 <https://github.com/nkantar/Parsenvy/releases/tag/1.0.2>`_).
 - Fully tested on Linux, macOS, and Windows.
 - No dependencies outside of the Python standard library.
 - BSD (3-Clause) licensed.
