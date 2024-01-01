@@ -5,7 +5,7 @@ Parsenvy: Enviously Elegant Environment Variable Parsing
 **Parsenvy** is an *enviously* elegant environment variable parsing Python library.
 
 .. image:: https://readthedocs.org/projects/parsenvy/badge/?version=latest&style=plastic
-        :target: https://parsenvy.readthedocs.io/en/latest
+        :target: https://parsenvy.readthedocs.io/latest
         :alt: main Documentation Status
 
 .. image:: https://github.com/nkantar/Parsenvy/actions/workflows/code-quality-checks.yml/badge.svg?branch=main
