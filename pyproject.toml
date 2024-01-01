@@ -48,6 +48,7 @@ python = "^3.9" # TODO not ideal, supporting 3.8 would be good
 # Docs
 sphinx = {version = "^7.2.6", optional = true}
 sphinx-rtd-theme = {version = "^2.0.0", optional = true}
+sphinx-mdinclude = {version = "^0.5.3", optional = true}
 
 [tool.poetry.dev-dependencies]
 mypy = "^1.8.0"
@@ -59,6 +60,7 @@ pytest-watch = "^4.2.0"
 coverage = "^7.4.0"
 pytest-cov = "^4.1.0"
 pdbpp = "^0.10.3"
+sphinx-mdinclude = "^0.5.3"
 
 # Docs
 # NOTE: Please also add to:
@@ -71,6 +73,7 @@ sphinx-rtd-theme = "^2.0.0"
 docs = [
   "sphinx",
   "sphinx-rtd-theme",
+  "sphinx-mdinclude",
 ]
 
 [build-system]
