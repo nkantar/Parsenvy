@@ -1,20 +1,22 @@
-[tool.poetry]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
 name = "Parsenvy"
 version = "3.0.2"
+dependencies = []
+requires-python = ">=3.9"
+authors = [
+    {name = "Nik Kantar", email = "nik@nkantar.com" },
+]
 description = "Enviously elegant environment variable parsing"
-license = "BSD-3-Clause"
-authors = ["Nik Kantar <nik@nkantar.com>"]
 readme = "README.rst"
-homepage = "https://pypi.org/project/Parsenvy"
-repository = "https://github.com/nkantar/Parsenvy"
-documentation = "https://parsenvy.readthedocs.io"
-
-keywords = ["environment", "variables"]
+license = {file = "LICENSE"}
 classifiers = [
   "Development Status :: 5 - Production/Stable",
   "Intended Audience :: Developers",
   "License :: OSI Approved :: BSD License",
-  "Programming Language :: Python :: 3.8",
   "Programming Language :: Python :: 3.9",
   "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: 3.11",
@@ -24,68 +26,26 @@ classifiers = [
   "Typing :: Typed",
 ]
 
-include = [
-  "CHANGELOG.md",
-  "CODE_OF_CONDUCT.rst",
-  "CONTRIBUTING.rst",
-  "LICENSE",
-  "Makefile",
-  "README.rst",
-  "bin/*.sh",
-  "docs/Makefile",
-  "docs/make.bat",
-  "docs/source/*.rst",
-  "docs/source/conf.py",
-  "parsenvy/*.py",
-  "poetry.lock",
-  "pyproject.toml",
-  "tests/test_*.py",
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.2",
+    "pytest>=8.3.2",
+    "pydocstyle>=6.3.0",
+    "mypy>=1.11.2",
+    "pdbpp>=0.10.3",
+    "coverage>=7.6.1",
+    "sphinx>=7.4.7",
+    "sphinx-rtd-theme>=2.0.0",
+    "sphinx-mdinclude>=0.6.2",
+    "pytest-cov>=5.0.0",
 ]
-
-[tool.poetry.dependencies]
-python = "^3.9" # TODO not ideal, supporting 3.8 would be good
-
-# Docs
-sphinx = {version = "^7.2.6", optional = true}
-sphinx-rtd-theme = {version = "^2.0.0", optional = true}
-sphinx-mdinclude = {version = "^0.5.3", optional = true}
-
-[tool.poetry.dev-dependencies]
-mypy = "^1.8.0"
-black = "^23.12.1"
-flake8 = "^6.1.0"
-pydocstyle = "^6.3.0"
-pytest = "^7.4.4"
-pytest-watch = "^4.2.0"
-coverage = "^7.4.0"
-pytest-cov = "^4.1.0"
-pdbpp = "^0.10.3"
-sphinx-mdinclude = "^0.5.3"
-
-# Docs
-# NOTE: Please also add to:
-#   - [tool.poetry.dependencies] above as optional
-#   - [tool.poetry.extras] below
-sphinx = "^7.2.6"
-sphinx-rtd-theme = "^2.0.0"
-
-[tool.poetry.extras]
-docs = [
-  "sphinx",
-  "sphinx-rtd-theme",
-  "sphinx-mdinclude",
-]
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
 
 [tool.pytest]
-python_paths = "parsenvy"
+python_paths = "src/parsenvy"
 
 [tool.coverage.run]
 branch = true
-source = ["parsenvy"]
+source = ["src"]
 
 [tool.coverage.report]
 show_missing = true
