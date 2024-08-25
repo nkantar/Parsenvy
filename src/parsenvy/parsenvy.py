@@ -5,7 +5,6 @@ This module provides all of Parsenvy's functionality by exposing functions the
 user is meant to utilize.
 """
 
-
 import builtins
 from functools import wraps
 import os

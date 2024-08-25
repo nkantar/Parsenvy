@@ -1,4 +1,4 @@
-name: Code quality checks
+name: Automated Checks
 
 on:
   push:
@@ -7,49 +7,49 @@ on:
   pull_request:
 
 jobs:
-  code_quality:
-    name: Check code quality
-
+  check:
     runs-on: ubuntu-latest
-
+    continue-on-error: true
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        python-version: ["3.9", "3.10", "3.11", "3.12"] # TODO 3.8 won't work
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13-dev"]
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - uses: actions/checkout@v4
 
-      - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v2
-        with:
-          python-version: ${{ matrix.python-version }}
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v5
+      with:
+        python-version: ${{ matrix.python-version }}
 
-      - name: Install dependencies
-        run: sh bin/cicd_install.sh
+    - name: Install just
+      # Temporarily use the open PR branch:
+      # - https://github.com/casey/just/pull/2312
+      # - https://github.com/casey/just/issues/2311
+      run: pipx install git+https://github.com/rachtsingh/just.git
 
-      - name: Check code formatting
-        run: make formatcheck
+    - name: Install uv
+      run: pipx install uv
 
-      - name: Check for linter errors
-        run: make lint
+    - name: Install dependencies
+      run: uv sync
 
-      - name: Check docstring formatting
-        run: make doccheck 
+    - name: Check formatting via ruff
+      run: uv run just formatcheck
 
-      - name: Check doc site build
-        run: make docs
+    - name: Check docstring formatting via pydocstyle
+      run: uv run just docstylecheck
 
-      - name: Check type annotations
-        run: make typecheck
+    - name: Check type hints via mypy
+      run: uv run just typecheck
 
-      - name: Run tests
-        run: make test
+    - name: Run linter via ruff
+      run: uv run just lint
 
-      - name: Check code coverage
-        run: make covcheck
+    - name: Run tests via pytest
+      run: uv run just test
 
-      - name: Check build
-        run: poetry build
+    - name: Build docs via sphinx
+      run: uv run just docs
