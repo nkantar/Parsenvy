@@ -2,6 +2,10 @@ from _pytest.monkeypatch import MonkeyPatch
 import parsenvy
 
 
+def test_set_none() -> None:
+    assert parsenvy.set("foo") is None
+
+
 def test_set_several(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setenv("foo", "bar,baz,barf")
     assert parsenvy.set("foo") == {"bar", "baz", "barf"}

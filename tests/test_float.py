@@ -4,6 +4,10 @@ import pytest
 import parsenvy
 
 
+def test_float_positive_none() -> None:
+    assert parsenvy.float("foo") is None
+
+
 def test_float_positive_integer(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setenv("foo", str(float(13)))
     assert parsenvy.float("foo") == float(13)

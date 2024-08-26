@@ -2,6 +2,10 @@ from _pytest.monkeypatch import MonkeyPatch
 import parsenvy
 
 
+def test_tuple_none() -> None:
+    assert parsenvy.tuple("foo") is None
+
+
 def test_tuple_several(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setenv("foo", "bar,baz,barf")
     assert parsenvy.tuple("foo") == ("bar", "baz", "barf")

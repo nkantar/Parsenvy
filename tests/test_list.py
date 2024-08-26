@@ -2,6 +2,10 @@ from _pytest.monkeypatch import MonkeyPatch
 import parsenvy
 
 
+def test_list_none() -> None:
+    assert parsenvy.list("foo") is None
+
+
 def test_list_several(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setenv("foo", "bar,baz,barf")
     assert parsenvy.list("foo") == ["bar", "baz", "barf"]

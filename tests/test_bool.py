@@ -4,6 +4,10 @@ import pytest
 import parsenvy
 
 
+def test_bool_true_none() -> None:
+    assert parsenvy.bool("foo") is None
+
+
 def test_bool_true_word(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setenv("foo", "TrUe")  # capitalization is intentional
     assert parsenvy.bool("foo") is True

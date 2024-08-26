@@ -3,6 +3,10 @@ from _pytest.monkeypatch import MonkeyPatch
 import parsenvy
 
 
+def test_str_none() -> None:
+    assert parsenvy.str("foo") is None
+
+
 def test_str_valid(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setenv("foo", "bar")
     assert parsenvy.str("foo") == "bar"

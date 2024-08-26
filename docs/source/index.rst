@@ -20,8 +20,6 @@ Home
    set
    str
 
-   default_if_none
-
    contributing
    conduct
 
