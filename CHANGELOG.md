@@ -2,17 +2,22 @@
 
 
 <!--
-headers:
-Added      - new features
-Changed    - changes in existing functionality
-Deprecated - soon-to-be removed features
-Removed    - now removed features
-Fixed      - any bug fixes
-Security   - in case of vulnerabilities
+- Added: for new features
+- Changed: for changes in existing functionality
+- Deprecated: for soon-to-be removed features
+- Removed: for now removed features
+- Fixed: for any bug fixes
+- Security: in case of vulnerabilities
 -->
 
 
 ## [Unreleased]
+
+### Added
+- Python 3.13-dev to CI version matrix
+
+### Removed
+- `default_if_none` decorator in favor of in-function implementation
 
 ### Fixed
 - Mismatch between env value and resulting tuple in docs (issue #63, PR #64).
