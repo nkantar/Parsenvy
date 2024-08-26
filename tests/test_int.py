@@ -4,6 +4,10 @@ import pytest
 import parsenvy
 
 
+def test_int_none() -> None:
+    assert parsenvy.int("foo") is None
+
+
 def test_int_positive(monkeypatch: MonkeyPatch) -> None:
     monkeypatch.setenv("foo", "13")
     assert parsenvy.int("foo") == 13
