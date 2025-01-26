@@ -14,7 +14,7 @@
 ## [Unreleased]
 
 ### Added
-- Python 3.13-dev to CI version matrix
+- Python 3.13 and 3.14-dev to CI version matrix
 
 ### Removed
 - `default_if_none` decorator in favor of in-function implementation
