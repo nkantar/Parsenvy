@@ -13,8 +13,12 @@
 
 ## [Unreleased]
 
+
+## [3.0.3] - 2025-01-26
+
 ### Added
 - Python 3.13 and 3.14-dev to CI version matrix
+- `py.typed`
 
 ### Removed
 - `default_if_none` decorator in favor of in-function implementation
@@ -201,7 +205,8 @@
 - Basic functionality
 
 
-[Unreleased]: https://github.com/nkantar/Parsenvy/compare/3.0.2...HEAD
+[Unreleased]: https://github.com/nkantar/Parsenvy/compare/3.0.3...HEAD
+[3.0.3]: https://github.com/nkantar/Parsenvy/compare/3.0.2...3.0.3
 [3.0.2]: https://github.com/nkantar/Parsenvy/compare/3.0.1...3.0.2
 [3.0.1]: https://github.com/nkantar/Parsenvy/compare/3.0.0...3.0.1
 [3.0.0]: https://github.com/nkantar/Parsenvy/compare/2.1.0...3.0.0

@@ -26,7 +26,7 @@ copyright = "2021, Nik Kantar <nik@nkantar.com>"
 author = "Nik Kantar <nik@nkantar.com>"
 
 # The full version, including alpha/beta/rc tags
-release = "3.0.2"
+release = "3.0.3"
 
 
 # -- General configuration ---------------------------------------------------
